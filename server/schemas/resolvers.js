@@ -1,26 +1,26 @@
-const { User, Thought } = require('../models');
-const { signToken, AuthenticationError } = require('../utils/auth');
+const { User, Review } = require('../models');
+const { signToken, NewAuthenticationError } = require('../utils/auth');
 
 const resolvers = {
   Query: {
     users: async () => {
-      return User.find().populate('thoughts');
+      return User.find().populate('reviews');
     },
     user: async (parent, { username }) => {
-      return User.findOne({ username }).populate('thoughts');
+      return User.findOne({ username }).populate('reviews');
     },
-    thoughts: async (parent, { username }) => {
-      const params = username ? { username } : {};
-      return Thought.find(params).sort({ createdAt: -1 });
+    reviews: async (parent, { username }) => {
+      const params = username ? { reviewAuthor: username } : {};
+      return Review.find(params).sort({ createdAt: -1 });
     },
-    thought: async (parent, { thoughtId }) => {
-      return Thought.findOne({ _id: thoughtId });
+    review: async (parent, { reviewId }) => {
+      return Review.findOne({ _id: reviewId });
     },
     me: async (parent, args, context) => {
       if (context.user) {
-        return User.findOne({ _id: context.user._id }).populate('thoughts');
+        return User.findOne({ _id: context.user._id }).populate('reviews');
       }
-      throw AuthenticationError;
+      throw NewAuthenticationError;
     },
   },
 
@@ -40,33 +40,33 @@ const resolvers = {
       const correctPw = await user.isCorrectPassword(password);
 
       if (!correctPw) {
-        throw AuthenticationError;
+        throw NewAuthenticationError;
       }
 
       const token = signToken(user);
 
       return { token, user };
     },
-    addThought: async (parent, { thoughtText }, context) => {
+    addReview: async (parent, { reviewText, reviewAuthor }, context) => {
       if (context.user) {
-        const thought = await Thought.create({
-          thoughtText,
-          thoughtAuthor: context.user.username,
+        const review = await Review.create({
+          reviewText,
+          reviewAuthor: context.user.username,
         });
 
         await User.findOneAndUpdate(
           { _id: context.user._id },
-          { $addToSet: { thoughts: thought._id } }
+          { $addToSet: { reviews: review._id } }
         );
 
-        return thought;
+        return review;
       }
-      throw AuthenticationError;
+      throw NewAuthenticationError;
     },
-    addComment: async (parent, { thoughtId, commentText }, context) => {
+    addComment: async (parent, { reviewId, commentText, commentAuthor }, context) => {
       if (context.user) {
-        return Thought.findOneAndUpdate(
-          { _id: thoughtId },
+        return Review.findOneAndUpdate(
+          { _id: reviewId },
           {
             $addToSet: {
               comments: { commentText, commentAuthor: context.user.username },
@@ -78,28 +78,28 @@ const resolvers = {
           }
         );
       }
-      throw AuthenticationError;
+      throw NewAuthenticationError;
     },
-    removeThought: async (parent, { thoughtId }, context) => {
+    removeReview: async (parent, { reviewId }, context) => {
       if (context.user) {
-        const thought = await Thought.findOneAndDelete({
-          _id: thoughtId,
-          thoughtAuthor: context.user.username,
+        const review = await Review.findOneAndDelete({
+          _id: reviewId,
+          reviewAuthor: context.user.username,
         });
 
         await User.findOneAndUpdate(
           { _id: context.user._id },
-          { $pull: { thoughts: thought._id } }
+          { $pull: { reviews: review._id } }
         );
 
-        return thought;
+        return review;
       }
-      throw AuthenticationError;
+      throw NewAuthenticationError;
     },
-    removeComment: async (parent, { thoughtId, commentId }, context) => {
+    removeComment: async (parent, { reviewId, commentId }, context) => {
       if (context.user) {
-        return Thought.findOneAndUpdate(
-          { _id: thoughtId },
+        return Review.findOneAndUpdate(
+          { _id: reviewId },
           {
             $pull: {
               comments: {
@@ -111,7 +111,7 @@ const resolvers = {
           { new: true }
         );
       }
-      throw AuthenticationError;
+      throw NewAuthenticationError;
     },
   },
 };
