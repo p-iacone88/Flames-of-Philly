@@ -1,6 +1,8 @@
 const { Schema, model } = require('mongoose');
 const bcrypt = require('bcrypt');
 
+const passwordRegex = /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[!@#$%^&*]).{8,}$/;
+
 const userSchema = new Schema({
   username: {
     type: String,
@@ -17,12 +19,17 @@ const userSchema = new Schema({
   password: {
     type: String,
     required: true,
-    minlength: 5,
+    validate: {
+      validator: function (password) {
+        return passwordRegex.test(password);
+      },
+      message: props => `${props.value} is not a valid password. Please make sure your password contains at least 8 characters, one uppercase letter, one lowercase letter, one number, and one special character (!@#$%^&*).`
+    }
   },
-  thoughts: [
+  reviews: [
     {
       type: Schema.Types.ObjectId,
-      ref: 'Thought',
+      ref: 'Review',
     },
   ],
 });
