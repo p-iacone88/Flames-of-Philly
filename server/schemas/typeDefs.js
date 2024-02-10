@@ -13,6 +13,20 @@ const typeDefs = `
     reviewAuthor: String
     createdAt: String
     comments: [Comment]!
+    restaurant: [Restaurant]!
+  }
+  
+  type Restaurant {
+    _id: ID
+    name: String!
+    address: String!
+    rating: Int!
+    spiceRating: Int!
+  }
+
+  type Favorite {
+    user: [User]
+    restaurant: [Restaurant]
   }
 
   type Comment {
