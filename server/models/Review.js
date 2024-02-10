@@ -38,6 +38,10 @@ const reviewSchema = new Schema({
       },
     },
   ],
+  restaurant: {
+    type: Schema.Types.ObjectId,
+    ref: 'Restaurant'
+  }
 });
 
 const Review = model('Review', reviewSchema);
