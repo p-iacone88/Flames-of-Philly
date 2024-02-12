@@ -1,32 +1,39 @@
-const db = require('../config/connection');
-const { User, Review } = require('../models');
+const { User, Review, Restaurant, Favorite } = require('../models');
 const userSeeds = require('./userSeeds.json');
 const reviewSeeds = require('./reviewSeeds.json');
 const cleanDB = require('./cleanDB');
 
-db.once('open', async () => {
+async function seedDatabase() {
   try {
     await cleanDB('Review', 'reviews');
     await cleanDB('User', 'users');
+    await cleanDB('Restaurant', 'restaurant');
+    await cleanDB('Favorite', 'favorite');
 
-    await User.create(userSeeds);
+    // Create users
+    const users = await User.create(userSeeds);
 
+    // Create reviews and link them to users
     for (let i = 0; i < reviewSeeds.length; i++) {
-      const { _id, reviewAuthor } = await Review.create(reviewSeeds[i]);
-      const user = await User.findOneAndUpdate(
-        { username: reviewAuthor },
-        {
-          $addToSet: {
-            reviews: _id,
-          },
-        }
-      );
+      const reviewSeed = reviewSeeds[i];
+      const user = users.find(user => user.username === reviewSeed.reviewAuthor);
+
+      if (!user) {
+        console.error(`User not found for review author: ${reviewSeed.reviewAuthor}`);
+        continue;
+      }
+
+      const review = await Review.create({ ...reviewSeed, user: user._id });
+      user.reviews.push(review._id);
+      await user.save();
     }
   } catch (err) {
     console.error(err);
     process.exit(1);
   }
 
-  console.log('all done!');
+  console.log('Seed data created successfully');
   process.exit(0);
-});
+}
+
+seedDatabase();
