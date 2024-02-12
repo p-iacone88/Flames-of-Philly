@@ -1,31 +1,47 @@
 const { User, Review, Restaurant, Favorite } = require('../models');
 const userSeeds = require('./userSeeds.json');
 const reviewSeeds = require('./reviewSeeds.json');
+const favoriteSeeds = require('./favoriteSeeds.json');
+const restaurantSeeds = require('./restaurantSeeds.json');
 const cleanDB = require('./cleanDB');
 
 async function seedDatabase() {
   try {
     await cleanDB('Review', 'reviews');
     await cleanDB('User', 'users');
-    await cleanDB('Restaurant', 'restaurant');
-    await cleanDB('Favorite', 'favorite');
+    await cleanDB('Restaurant', 'restaurants');
+    await cleanDB('Favorite', 'favorites');
 
     // Create users
     const users = await User.create(userSeeds);
 
-    // Create reviews and link them to users
-    for (let i = 0; i < reviewSeeds.length; i++) {
-      const reviewSeed = reviewSeeds[i];
-      const user = users.find(user => user.username === reviewSeed.reviewAuthor);
+    // Create restaurants
+    const restaurants = await Restaurant.create(restaurantSeeds);
 
-      if (!user) {
-        console.error(`User not found for review author: ${reviewSeed.reviewAuthor}`);
+    // Create reviews and link them to users and restaurants
+    for (const reviewSeed of reviewSeeds) {
+      const user = users.find(user => user.username === reviewSeed.reviewAuthor);
+      const restaurant = restaurants.find(restaurant => restaurant.name === reviewSeed.restaurant);
+
+      if (!user || !restaurant) {
+        console.error(`User or Restaurant not found for review: ${JSON.stringify(reviewSeed)}`);
         continue;
       }
 
-      const review = await Review.create({ ...reviewSeed, user: user._id });
-      user.reviews.push(review._id);
-      await user.save();
+      await Review.create({ ...reviewSeed, user: user._id, restaurant: restaurant._id });
+    }
+
+    // Create favorites and link them to users and restaurants
+    for (const favoriteSeed of favoriteSeeds) {
+      const user = users.find(user => user.username === favoriteSeed.user);
+      const restaurant = restaurants.find(restaurant => restaurant.name === favoriteSeed.restaurant);
+
+      if (!user || !restaurant) {
+        console.error(`User or Restaurant not found for favorite: ${JSON.stringify(favoriteSeed)}`);
+        continue;
+      }
+
+      await Favorite.create({ user: user._id, restaurant: restaurant._id });
     }
   } catch (err) {
     console.error(err);
