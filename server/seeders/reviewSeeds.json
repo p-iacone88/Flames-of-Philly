@@ -1,6 +1,6 @@
 [
     {
-        "reviewText": "Everyone knows that debugging is twice as hard as writing a program in the first place. So if you're as clever as you can be when you write it, how will you ever debug it?",
+        "reviewText": "The spice level at {restaurant} was just perfect - not too hot, not too mild!",
         "reviewAuthor": "Brian Kernighan",
         "createdAt": "2023-05-13",
         "comments": [
@@ -10,10 +10,10 @@
                 "createdAt": "2021-11-18"
             }
         ],
-        "restaurant": "Basil & Thyme"
+        "restaurant": "Halal Spice"
     },
     {
-        "reviewText": "Some of the best programming is done on paper, really. Putting it into the computer is just a minor detail.",
+        "reviewText": "Loved the fiery dishes at Asads Hot Chicken. The heat was intense but enjoyable.",
         "reviewAuthor": "Max Kanat-Alexander",
         "createdAt": "2023-06-21",
         "comments": [
@@ -33,17 +33,17 @@
                 "createdAt": "2020-07-07"
             }
         ],
-        "restaurant": "The Fiery Crab"
+        "restaurant": "Asads Hot Chicken"
     },
     {
-        "reviewText": "When you don't create things, you become defined by your tastes rather than ability. Your tastes only narrow & exclude people. So create.",
+        "reviewText": "The mild spices at the restaurant were perfect for my taste. Great for those who prefer less heat.",
         "reviewAuthor": "Why The Lucky Stiff",
         "createdAt": "2020-07-25",
         "comments": [],
         "restaurant": "Chili Pepper House"
     },
     {
-        "reviewText": "I'm not a great programmer; I'm just a good programmer with great habits.",
+        "reviewText": "The spicy food at {restaurant} really packs a punch! Not for the faint-hearted.",
         "reviewAuthor": "Kent Beck",
         "createdAt": "2021-12-16",
         "comments": [
@@ -63,10 +63,10 @@
                 "createdAt": "2020-08-29"
             }
         ],
-        "restaurant": "The Fiery Crab"
+        "restaurant": "Casablanca Carribean Cuisine"
     },
     {
-        "reviewText": "Walking on water and developing software from a specification are easy if both are frozen.",
+        "reviewText": "Enjoyed the balanced spice levels at {restaurant}. Flavorful but not overwhelming.",
         "reviewAuthor": "Edward V. Berard",
         "createdAt": "2020-02-16",
         "comments": [
@@ -86,10 +86,10 @@
                 "createdAt": "2020-08-18"
             }
         ],
-        "restaurant": "Chili Pepper House"
+        "restaurant": "Hotclucks"
     },
     {
-        "reviewText": "The most disastrous thing that you can ever learn is your first programming language.",
+        "reviewText": "The spicy food at King of Tandoor really packs a punch! Not for the faint-hearted.",
         "reviewAuthor": "Alan Kay",
         "createdAt": "2020-11-08",
         "comments": [
@@ -99,17 +99,17 @@
                 "createdAt": "2023-12-09"
             }
         ],
-        "restaurant": "Basil & Thyme"
+        "restaurant": "King of Tandoor"
     },
     {
-        "reviewText": "The most important property of a program is whether it accomplishes the intention of its user.",
+        "reviewText": "I found it a bit too spicy for my liking, but still good.",
         "reviewAuthor": "C.A.R. Hoare",
         "createdAt": "2023-10-27",
         "comments": [],
         "restaurant": "Saffron Lounge"
     },
     {
-        "reviewText": "Delivering good software today is often better than perfect software tomorrow, so finish things and ship.",
+        "reviewText": "Perfect for someone like me who can't handle too much heat.",
         "reviewAuthor": "David Thomas",
         "createdAt": "2023-02-14",
         "comments": [
@@ -119,20 +119,20 @@
                 "createdAt": "2020-10-29"
             }
         ],
-        "restaurant": "Basil & Thyme"
+        "restaurant": "Amma's South Indian Cuisine"
     },
     {
-        "reviewText": "If you optimize everything, you will always be unhappy.",
+        "reviewText": "It was so spicy, I needed lots of water! But loved it.",
         "reviewAuthor": "Donald Knuth",
         "createdAt": "2022-11-09",
         "comments": [],
-        "restaurant": "Chili Pepper House"
+        "restaurant": "Han Dynasty"
     },
     {
-        "reviewText": "It's not a bug; it's an undocumented feature.",
+        "reviewText": "The spices were indeed well-balanced, made for a great meal.",
         "reviewAuthor": "Lernantino",
         "createdAt": "2021-06-13",
         "comments": [],
-        "restaurant": "The Fiery Crab"
+        "restaurant": "Tamarind"
     }
 ]
