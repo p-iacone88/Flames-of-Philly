@@ -12,10 +12,10 @@ const resolvers = {
     user: async (parent, { username }) => {
       return User.findOne({ username }).populate('reviews');
     },
-  // allReviews
-  allReviews: async () => {
-    return Review.find();
-  },
+  // // allReviews
+  // allReviews: async () => {
+  //   return Review.find();
+  // },
   // userReviews
     reviews: async (parent, { username }) => {
       const params = username ? { reviewAuthor: username } : {};
@@ -29,7 +29,7 @@ const resolvers = {
       if (context.user) {
         return User.findOne({ _id: context.user._id }).populate('reviews');
       }
-      throw NewAuthenticationError;
+      throw new NewAuthenticationError();
     },
   },
 
@@ -43,13 +43,13 @@ const resolvers = {
       const user = await User.findOne({ email });
 
       if (!user) {
-        throw AuthenticationError;
+        throw new NewAuthenticationError();
       }
 
       const correctPw = await user.isCorrectPassword(password);
 
       if (!correctPw) {
-        throw NewAuthenticationError;
+        throw new NewAuthenticationError();
       }
 
       const token = signToken(user);
@@ -70,7 +70,7 @@ const resolvers = {
 
         return review;
       }
-      throw NewAuthenticationError;
+      throw new NewAuthenticationError();
     },
     addComment: async (parent, { reviewId, commentText, commentAuthor }, context) => {
       if (context.user) {
@@ -87,7 +87,7 @@ const resolvers = {
           }
         );
       }
-      throw NewAuthenticationError;
+      throw new NewAuthenticationError();
     },
     removeReview: async (parent, { reviewId }, context) => {
       if (context.user) {
@@ -103,7 +103,7 @@ const resolvers = {
 
         return review;
       }
-      throw NewAuthenticationError;
+      throw new NewAuthenticationError();
     },
     removeComment: async (parent, { reviewId, commentId }, context) => {
       if (context.user) {
@@ -120,7 +120,7 @@ const resolvers = {
           { new: true }
         );
       }
-      throw NewAuthenticationError;
+      throw new NewAuthenticationError();
     },
   },
 };
