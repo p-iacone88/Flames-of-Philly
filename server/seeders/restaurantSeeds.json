@@ -1,0 +1,27 @@
+[
+    {
+      "name": "The Fiery Crab",
+      "address": "123 Ocean Avenue, Beachtown",
+      "rating": 4,
+      "spiceRating": 5
+    },
+    {
+      "name": "Saffron Lounge",
+      "address": "456 Spice Blvd, Flavortown",
+      "rating": 5,
+      "spiceRating": 3
+    },
+    {
+      "name": "Basil & Thyme",
+      "address": "789 Herb Lane, Plantville",
+      "rating": 4.5,
+      "spiceRating": 2
+    },
+    {
+      "name": "Chili Pepper House",
+      "address": "101 Hot Street, Capsicumburg",
+      "rating": 3.5,
+      "spiceRating": 5
+    }
+  ]
+  
