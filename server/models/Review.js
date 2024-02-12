@@ -9,11 +9,6 @@ const reviewSchema = new Schema({
     maxlength: 280,
     trim: true,
   },
-  reviewAuthor: {
-    type: String,
-    required: true,
-    trim: true,
-  },
   createdAt: {
     type: Date,
     default: Date.now,
@@ -41,6 +36,10 @@ const reviewSchema = new Schema({
   restaurant: {
     type: Schema.Types.ObjectId,
     ref: 'Restaurant'
+  },
+  user: {
+    type: Schema.Types.ObjectId,
+    ref: 'User'
   }
 });
 
