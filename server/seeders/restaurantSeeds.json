@@ -1,26 +1,98 @@
 [
     {
-      "name": "The Fiery Crab",
-      "address": "123 Ocean Avenue, Beachtown",
-      "rating": 4,
+      "name": "Halal Spice",
+      "address": "Placeholder Address",
+      "rating": 5,
       "spiceRating": 5
     },
     {
-      "name": "Saffron Lounge",
-      "address": "456 Spice Blvd, Flavortown",
+      "name": "Asads Hot Chicken",
+      "address": "Placeholder Address",
       "rating": 5,
-      "spiceRating": 3
+      "spiceRating": 5
     },
     {
-      "name": "Basil & Thyme",
-      "address": "789 Herb Lane, Plantville",
-      "rating": 4.5,
-      "spiceRating": 2
+      "name": "Casablanca Carribean Cuisine",
+      "address": "Placeholder Address",
+      "rating": 5,
+      "spiceRating": 5
     },
     {
-      "name": "Chili Pepper House",
-      "address": "101 Hot Street, Capsicumburg",
-      "rating": 3.5,
+      "name": "Hotclucks",
+      "address": "Placeholder Address",
+      "rating": 5,
+      "spiceRating": 5
+    },
+    {
+      "name": "King of Tandoor",
+      "address": "Placeholder Address",
+      "rating": 5,
+      "spiceRating": 5
+    },
+    {
+      "name": "Amma's South Indian Cuisine",
+      "address": "Placeholder Address",
+      "rating": 5,
+      "spiceRating": 5
+    },
+    {
+      "name": "Han Dynasty",
+      "address": "Placeholder Address",
+      "rating": 5,
+      "spiceRating": 5
+    },
+    {
+      "name": "Buddakan",
+      "address": "Placeholder Address",
+      "rating": 5,
+      "spiceRating": 5
+    },
+    {
+      "name": "Cafe Soho",
+      "address": "Placeholder Address",
+      "rating": 5,
+      "spiceRating": 5
+    },
+    {
+      "name": "Tamarind",
+      "address": "Placeholder Address",
+      "rating": 5,
+      "spiceRating": 5
+    },
+    {
+      "name": "Gojjo",
+      "address": "Placeholder Address",
+      "rating": 5,
+      "spiceRating": 5
+    },
+    {
+      "name": "Sophie's Kitchen",
+      "address": "Placeholder Address",
+      "rating": 5,
+      "spiceRating": 5
+    },
+    {
+      "name": "Sancho's Pistola's",
+      "address": "Placeholder Address",
+      "rating": 5,
+      "spiceRating": 5
+    },
+    {
+      "name": "Vista Peru",
+      "address": "Placeholder Address",
+      "rating": 5,
+      "spiceRating": 5
+    },
+    {
+      "name": "Mixto Restaurante",
+      "address": "Placeholder Address",
+      "rating": 5,
+      "spiceRating": 5
+    },
+    {
+      "name": "Jose Pistola's",
+      "address": "Placeholder Address",
+      "rating": 5,
       "spiceRating": 5
     }
   ]
