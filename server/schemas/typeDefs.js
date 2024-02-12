@@ -5,6 +5,7 @@ const typeDefs = `
     email: String
     password: String
     reviews: [Review]!
+    favorites: [Restaurant]!
   }
 
   type Review {
@@ -13,22 +14,17 @@ const typeDefs = `
     reviewAuthor: String
     createdAt: String
     comments: [Comment]!
-    restaurant: [Restaurant]!
+    user: User!
+    restaurant: Restaurant!
   }
   
   type Restaurant {
-    _id: ID
+    _id: ID!
     name: String!
     address: String!
     rating: Int!
     spiceRating: Int!
   }
-
-  type Favorite {
-    user: [User]
-    restaurant: [Restaurant]
-  }
-
   type Comment {
     _id: ID
     commentText: String
@@ -40,6 +36,13 @@ const typeDefs = `
     token: ID!
     user: User
   }
+input ReviewInput {
+  reviewTest: String!
+}
+input CommentInput {
+  commentText: String!
+  commentAuthor: String!
+}
 
   type Query {
     users: [User]
@@ -49,7 +52,7 @@ const typeDefs = `
     me: User
   }
 
-  type Mutation {
+  type Mutation { 
     addUser(username: String!, email: String!, password: String!): Auth
     login(email: String!, password: String!): Auth
     addReview(reviewText: String!): Review

@@ -1,6 +1,9 @@
 const { User, Review } = require('../models');
 const { signToken, NewAuthenticationError } = require('../utils/auth');
 
+
+// leave the addUser, login, me, users, user alone
+
 const resolvers = {
   Query: {
     users: async () => {
@@ -9,10 +12,16 @@ const resolvers = {
     user: async (parent, { username }) => {
       return User.findOne({ username }).populate('reviews');
     },
+  // allReviews
+  allReviews: async () => {
+    return Review.find();
+  },
+  // userReviews
     reviews: async (parent, { username }) => {
       const params = username ? { reviewAuthor: username } : {};
       return Review.find(params).sort({ createdAt: -1 });
     },
+  // review by id
     review: async (parent, { reviewId }) => {
       return Review.findOne({ _id: reviewId });
     },
