@@ -12,16 +12,16 @@ const resolvers = {
     user: async (parent, { username }) => {
       return User.findOne({ username }).populate('reviews');
     },
-  // // allReviews
-  // allReviews: async () => {
-  //   return Review.find();
-  // },
-  // userReviews
+    // allReviews
+    // allReviews: async () => {
+    //   return Reviews.find()
+    // },
+    // userReviews
     reviews: async (parent, { username }) => {
       const params = username ? { reviewAuthor: username } : {};
       return Review.find(params).sort({ createdAt: -1 });
     },
-  // review by id
+    // review by id
     review: async (parent, { reviewId }) => {
       return Review.findOne({ _id: reviewId });
     },
@@ -29,7 +29,7 @@ const resolvers = {
       if (context.user) {
         return User.findOne({ _id: context.user._id }).populate('reviews');
       }
-      throw new NewAuthenticationError();
+      throw NewAuthenticationError;
     },
   },
 
@@ -43,13 +43,13 @@ const resolvers = {
       const user = await User.findOne({ email });
 
       if (!user) {
-        throw new NewAuthenticationError();
+        throw AuthenticationError;
       }
 
       const correctPw = await user.isCorrectPassword(password);
 
       if (!correctPw) {
-        throw new NewAuthenticationError();
+        throw NewAuthenticationError;
       }
 
       const token = signToken(user);
@@ -70,7 +70,7 @@ const resolvers = {
 
         return review;
       }
-      throw new NewAuthenticationError();
+      throw NewAuthenticationError;
     },
     addComment: async (parent, { reviewId, commentText, commentAuthor }, context) => {
       if (context.user) {
@@ -87,7 +87,7 @@ const resolvers = {
           }
         );
       }
-      throw new NewAuthenticationError();
+      throw NewAuthenticationError;
     },
     removeReview: async (parent, { reviewId }, context) => {
       if (context.user) {
@@ -103,7 +103,7 @@ const resolvers = {
 
         return review;
       }
-      throw new NewAuthenticationError();
+      throw NewAuthenticationError;
     },
     removeComment: async (parent, { reviewId, commentId }, context) => {
       if (context.user) {
@@ -120,7 +120,7 @@ const resolvers = {
           { new: true }
         );
       }
-      throw new NewAuthenticationError();
+      throw NewAuthenticationError;
     },
   },
 };

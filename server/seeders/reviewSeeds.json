@@ -2,71 +2,137 @@
     {
         "reviewText": "Everyone knows that debugging is twice as hard as writing a program in the first place. So if you're as clever as you can be when you write it, how will you ever debug it?",
         "reviewAuthor": "Brian Kernighan",
-        "createdAt": "",
-        "comments": "",
-        "restuarant": ""
+        "createdAt": "2023-05-13",
+        "comments": [
+            {
+                "commentText": "Great review!",
+                "commentAuthor": "Brian Kernighan",
+                "createdAt": "2021-11-18"
+            }
+        ],
+        "restaurant": "Basil & Thyme"
     },
     {
         "reviewText": "Some of the best programming is done on paper, really. Putting it into the computer is just a minor detail.",
         "reviewAuthor": "Max Kanat-Alexander",
-        "createdAt": "",
-        "comments": "",
-        "restuarant": ""
+        "createdAt": "2023-06-21",
+        "comments": [
+            {
+                "commentText": "Couldn't have said it better myself.",
+                "commentAuthor": "Max Kanat-Alexander",
+                "createdAt": "2023-04-01"
+            },
+            {
+                "commentText": "Interesting point of view.",
+                "commentAuthor": "David Thomas",
+                "createdAt": "2020-04-05"
+            },
+            {
+                "commentText": "I completely agree.",
+                "commentAuthor": "David Thomas",
+                "createdAt": "2020-07-07"
+            }
+        ],
+        "restaurant": "The Fiery Crab"
     },
     {
         "reviewText": "When you don't create things, you become defined by your tastes rather than ability. Your tastes only narrow & exclude people. So create.",
         "reviewAuthor": "Why The Lucky Stiff",
-        "createdAt": "",
-        "comments": "",
-        "restuarant": ""
+        "createdAt": "2020-07-25",
+        "comments": [],
+        "restaurant": "Chili Pepper House"
     },
     {
         "reviewText": "I'm not a great programmer; I'm just a good programmer with great habits.",
         "reviewAuthor": "Kent Beck",
-        "createdAt": "",
-        "comments": "",
-        "restuarant": ""
+        "createdAt": "2021-12-16",
+        "comments": [
+            {
+                "commentText": "I completely agree.",
+                "commentAuthor": "C.A.R. Hoare",
+                "createdAt": "2022-03-25"
+            },
+            {
+                "commentText": "Thanks for sharing your thoughts!",
+                "commentAuthor": "Why The Lucky Stiff",
+                "createdAt": "2023-02-18"
+            },
+            {
+                "commentText": "Great review!",
+                "commentAuthor": "Lernantino",
+                "createdAt": "2020-08-29"
+            }
+        ],
+        "restaurant": "The Fiery Crab"
     },
     {
         "reviewText": "Walking on water and developing software from a specification are easy if both are frozen.",
         "reviewAuthor": "Edward V. Berard",
-        "createdAt": "",
-        "comments": "",
-        "restuarant": ""
+        "createdAt": "2020-02-16",
+        "comments": [
+            {
+                "commentText": "Thanks for sharing your thoughts!",
+                "commentAuthor": "Alan Kay",
+                "createdAt": "2022-07-26"
+            },
+            {
+                "commentText": "Interesting point of view.",
+                "commentAuthor": "Lernantino",
+                "createdAt": "2023-01-01"
+            },
+            {
+                "commentText": "Couldn't have said it better myself.",
+                "commentAuthor": "C.A.R. Hoare",
+                "createdAt": "2020-08-18"
+            }
+        ],
+        "restaurant": "Chili Pepper House"
     },
     {
         "reviewText": "The most disastrous thing that you can ever learn is your first programming language.",
         "reviewAuthor": "Alan Kay",
-        "createdAt": "",
-        "comments": "",
-        "restuarant": ""
+        "createdAt": "2020-11-08",
+        "comments": [
+            {
+                "commentText": "Interesting point of view.",
+                "commentAuthor": "Donald Knuth",
+                "createdAt": "2023-12-09"
+            }
+        ],
+        "restaurant": "Basil & Thyme"
     },
     {
         "reviewText": "The most important property of a program is whether it accomplishes the intention of its user.",
         "reviewAuthor": "C.A.R. Hoare",
-        "createdAt": "",
-        "comments": "",
-        "restuarant": ""
+        "createdAt": "2023-10-27",
+        "comments": [],
+        "restaurant": "Saffron Lounge"
     },
     {
         "reviewText": "Delivering good software today is often better than perfect software tomorrow, so finish things and ship.",
         "reviewAuthor": "David Thomas",
-        "createdAt": "",
-        "comments": "",
-        "restuarant": ""
+        "createdAt": "2023-02-14",
+        "comments": [
+            {
+                "commentText": "Interesting point of view.",
+                "commentAuthor": "Why The Lucky Stiff",
+                "createdAt": "2020-10-29"
+            }
+        ],
+        "restaurant": "Basil & Thyme"
     },
     {
         "reviewText": "If you optimize everything, you will always be unhappy.",
         "reviewAuthor": "Donald Knuth",
-        "createdAt": "",
-        "comments": "",
-        "restuarant": ""
+        "createdAt": "2022-11-09",
+        "comments": [],
+        "restaurant": "Chili Pepper House"
     },
     {
         "reviewText": "It's not a bug; it's an undocumented feature.",
         "reviewAuthor": "Lernantino",
-        "createdAt": "",
-        "comments": "",
-        "restuarant": ""
+        "createdAt": "2021-06-13",
+        "comments": [],
+        "restaurant": "The Fiery Crab"
     }
 ]
