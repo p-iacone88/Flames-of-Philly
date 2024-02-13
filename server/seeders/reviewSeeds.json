@@ -43,7 +43,7 @@
         "restaurant": "Buddakan"
     },
     {
-        "reviewText": "The spicy food at Casablanca Carribean Cuisine really packs a punch! Not for the faint-hearted.",
+        "reviewText": "The spicy food at Casablanca Mediterranean Grill really packs a punch! Not for the faint-hearted.",
         "reviewAuthor": "J.J. Pepper",
         "createdAt": "2021-12-16",
         "comments": [
@@ -63,7 +63,7 @@
                 "createdAt": "2020-08-29"
             }
         ],
-        "restaurant": "Casablanca Carribean Cuisine"
+        "restaurant": "Casablanca Mediterranean Grill"
     },
     {
         "reviewText": "Enjoyed the balanced spice levels at Hotclucks. Flavorful but not overwhelming.",
