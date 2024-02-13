@@ -6,9 +6,9 @@ const cleanDB = require('./cleanDB');
 
 async function seedDatabase() {
   try {
-    await cleanDB('Review', 'reviews');
-    await cleanDB('User', 'users');
-    await cleanDB('Restaurant', 'restaurants');
+    // await cleanDB('Review', 'reviews');
+    // await cleanDB('User', 'users');
+    // await cleanDB('Restaurant', 'restaurants');
 
     // Create users
     const users = await User.create(userSeeds);

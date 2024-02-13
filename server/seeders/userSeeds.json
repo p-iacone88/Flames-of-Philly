@@ -1,62 +1,52 @@
 [
   {
-    "username": "Brian Kernighan",
+    "username": "Crisco Thomas",
     "email": "bkernighan@techfriends.dev",
-    "password": "password01",
-    "reviews": "."
+    "password": "Password01!"
   },
   {
-    "username": "Max Kanat-Alexander",
+    "username": "Corby Tender",
     "email": "mkanatalexander@techfriends.dev",
-    "password": "password02",
-    "reviews": "."
+    "password": "Password02!"
   },
   {
-    "username": "Why The Lucky Stiff",
+    "username": "Celery Man",
     "email": "wtls@techfriends.dev",
-    "password": "password03",
-    "reviews": "."
+    "password": "Password03!"
   },
   {
-    "username": "Kent Beck",
+    "username": "J.J. Pepper",
     "email": "kbeck@techfriends.dev",
-    "password": "password04",
-    "reviews": "."
+    "password": "Password04!"
   },
   {
-    "username": "Edward V. Berard",
+    "username": "James Quall",
     "email": "evberard@techfriends.dev",
-    "password": "password05",
-    "reviews": "."
+    "password": "Password05!"
   },
   {
-    "username": "Alan Kay",
+    "username": "Dee Vee",
     "email": "akay@techfriends.dev",
-    "password": "password06",
-    "reviews": "."
+    "password": "Password06!"
   },
   {
-    "username": "C.A.R. Hoare",
+    "username": "David Liebe Hart",
     "email": "choare@techfriends.dev",
-    "password": "password07",
-    "reviews": "."
+    "password": "Password07!"
   },
   {
-    "username": "David Thomas",
+    "username": "Tony Cheese",
     "email": "dthomas@techfriends.dev",
-    "password": "password08",
-    "reviews": "."
+    "password": "Password08!"
   },
   {
-    "username": "Donald Knuth",
+    "username": "Richard Dunn",
     "email": "dknuth@techfriends.dev",
-    "password": "password09",
-    "reviews": "."
+    "password": "Password09!"
   },
   {
-    "username": "Lernantino",
-    "email": "lernantino@techfriends.dev",
-    "password": "password10",
-    "reviews": "."
+    "username": "Dr. Steve Brule",
+    "email": "Dr. Steve Brule@techfriends.dev",
+    "password": "Password10!"
   }
 ]
