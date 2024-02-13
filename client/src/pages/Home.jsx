@@ -4,7 +4,7 @@ import './Home.css';
 const images = [
   '/src/assets/asads.jpg',
   '/src/assets/vistaperu.jpg',
-  '/src/assets/sophieskitchen.jpg'
+  '/src/assets/handynasty.webp'
 ];
 
 const Home = () => {
@@ -28,7 +28,7 @@ const Home = () => {
 
   return (
     <div className="home-container">
-      <h2>Welcome to Flames of Philly!</h2>
+      <h2>Welcome to Flames of Philly!🔥</h2>
       <div className="slideshow-container">
         {images.map((src, index) => (
           <img
