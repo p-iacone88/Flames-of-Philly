@@ -1,93 +1,92 @@
 [
-    {
-      "name": "Asads Hot Chicken",
-      "address": "16 S 40th St, Philadelphia, PA 19104",
-      "rating": 5,
-      "spiceRating": 5
-    },
-    {
-      "name": "Casablanca Mediterranean Grill",
-      "address": "947 Federal St, Philadelphia, PA 19147",
-      "rating": 5,
-      "spiceRating": 4
-    },
-    {
-      "name": "Hotclucks",
-      "address": "10 W Chelten Ave, Philadelphia, PA 19144",
-      "rating": 4,
-      "spiceRating": 5
-    },
-    {
-      "name": "King of Tandoor",
-      "address": "1824 Callowhill St, Philadelphia, PA 19130",
-      "rating": 4.5,
-      "spiceRating": 5
-    },
-    {
-      "name": "Amma's South Indian Cuisine",
-      "address": "1518 Chestnut St, Philadelphia, PA 19102",
-      "rating": 4.5,
-      "spiceRating": 5
-    },
-    {
-      "name": "Han Dynasty",
-      "address": "3711 Market Street, Philadelphia, PA 19104",
-      "rating": 4,
-      "spiceRating": 5
-    },
-    {
-      "name": "Buddakan",
-      "address": "325 Chestnut St, Philadelphia, PA 19106",
-      "rating": 4,
-      "spiceRating": 5
-    },
-    {
-      "name": "Cafe Soho",
-      "address": "468 W Cheltenham Ave, Philadelphia, PA 19126",
-      "rating": 4.5,
-      "spiceRating": 5
-    },
-    {
-      "name": "Tamarind",
-      "address": "117 South St, Philadelphia, PA 19147",
-      "rating": 4.5,
-      "spiceRating": 5
-    },
-    {
-      "name": "Gojjo",
-      "address": "4540 Baltimore Ave, Philadelphia, PA 19143",
-      "rating": 4.5,
-      "spiceRating": 5
-    },
-    {
-      "name": "Sophie's Kitchen",
-      "address": "522 Washington Ave, Philadelphia, PA 19147",
-      "rating": 4.5,
-      "spiceRating": 5
-    },
-    {
-      "name": "Sancho's Pistola's",
-      "address": "19 W Girard Ave, Philadelphia, PA 19125",
-      "rating": 5.0,
-      "spiceRating": 5
-    },
-    {
-      "name": "Vista Peru",
-      "address": "20 S 2nd St, Philadelphia, PA 19106",
-      "rating": 4.5,
-      "spiceRating": 5
-    },
-    {
-      "name": "Mixto Restaurante",
-      "address": "1141 Pine St, Philadelphia, PA 19107",
-      "rating": 4,
-      "spiceRating": 5
-    },
-    {
-      "name": "Jose Pistola's",
-      "address": "263 S 15th St, Philadelphia, PA 19102",
-      "rating": 4.5,
-      "spiceRating": 5
-    }
-  ]
-  
+  {
+    "name": "Asads Hot Chicken",
+    "address": "16 S 40th St, Philadelphia, PA 19104",
+    "rating": 5,
+    "spiceRating": 5
+  },
+  {
+    "name": "Casablanca Mediterranean Grill",
+    "address": "947 Federal St, Philadelphia, PA 19147",
+    "rating": 5,
+    "spiceRating": 4
+  },
+  {
+    "name": "Hotclucks",
+    "address": "10 W Chelten Ave, Philadelphia, PA 19144",
+    "rating": 4,
+    "spiceRating": 5
+  },
+  {
+    "name": "King of Tandoor",
+    "address": "1824 Callowhill St, Philadelphia, PA 19130",
+    "rating": 4.5,
+    "spiceRating": 5
+  },
+  {
+    "name": "Amma's South Indian Cuisine",
+    "address": "1518 Chestnut St, Philadelphia, PA 19102",
+    "rating": 4.5,
+    "spiceRating": 5
+  },
+  {
+    "name": "Han Dynasty",
+    "address": "3711 Market Street, Philadelphia, PA 19104",
+    "rating": 4,
+    "spiceRating": 5
+  },
+  {
+    "name": "Buddakan",
+    "address": "325 Chestnut St, Philadelphia, PA 19106",
+    "rating": 4,
+    "spiceRating": 5
+  },
+  {
+    "name": "Cafe Soho",
+    "address": "468 W Cheltenham Ave, Philadelphia, PA 19126",
+    "rating": 4.5,
+    "spiceRating": 5
+  },
+  {
+    "name": "Tamarind",
+    "address": "117 South St, Philadelphia, PA 19147",
+    "rating": 4.5,
+    "spiceRating": 5
+  },
+  {
+    "name": "Gojjo",
+    "address": "4540 Baltimore Ave, Philadelphia, PA 19143",
+    "rating": 4.5,
+    "spiceRating": 5
+  },
+  {
+    "name": "Sophie's Kitchen",
+    "address": "522 Washington Ave, Philadelphia, PA 19147",
+    "rating": 4.5,
+    "spiceRating": 5
+  },
+  {
+    "name": "Sancho's Pistola's",
+    "address": "19 W Girard Ave, Philadelphia, PA 19125",
+    "rating": 5.0,
+    "spiceRating": 5
+  },
+  {
+    "name": "Vista Peru",
+    "address": "20 S 2nd St, Philadelphia, PA 19106",
+    "rating": 4.5,
+    "spiceRating": 5
+  },
+  {
+    "name": "Mixto Restaurante",
+    "address": "1141 Pine St, Philadelphia, PA 19107",
+    "rating": 4,
+    "spiceRating": 5
+  },
+  {
+    "name": "Jose Pistola's",
+    "address": "263 S 15th St, Philadelphia, PA 19102",
+    "rating": 4.5,
+    "spiceRating": 5
+  }
+]
