@@ -43,7 +43,6 @@ input CommentInput {
   commentText: String!
   commentAuthor: String!
 }
-
   type Query {
     users: [User]
     user(username: String!): User
@@ -53,12 +52,11 @@ input CommentInput {
     restaurant(id: ID!): Restaurant
     restaurants: [Restaurant]
   }
-
   type Mutation { 
     addUser(username: String!, email: String!, password: String!): Auth
     login(email: String!, password: String!): Auth
     addReview(reviewText: String!): Review
-    addComment(reviewId: ID!, commentText: String!): Review
+    addComment(reviewId: ID!, comment: CommentInput!): Review
     removeReview(reviewId: ID!): Review
     removeComment(reviewId: ID!, commentId: ID!): Review
   }
