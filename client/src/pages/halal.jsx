@@ -2,7 +2,7 @@ import React from 'react';
 import './Halal.css'; // Ensure the CSS file is imported
 import asadsHotChickenImage from '../assets/asads.jpg'; // Adjust the path as necessary
 
-function HalalCuisine() {
+function Halal() {
   return (
     <div className="halal-cuisine-page">
       <nav className="navbar">Navbar Content</nav>
