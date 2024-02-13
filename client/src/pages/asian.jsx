@@ -1,8 +1,8 @@
 import React from 'react';
-import './asian.css'; // Ensures the CSS file is imported
-import hanDynastyImage from './assets/handynasty.webp'; //
+import './Asian.css'; // Ensures the CSS file is imported
+import hanDynastyImage from '../assets/handynasty.webp'; //
 
-function AsianCuisine() {
+function Asian() {
   return (
     <div className="asian-cuisine-page">
       <nav className="navbar">Navbar Content</nav>

@@ -1,8 +1,8 @@
 import React from 'react';
 import './Latin.css'; 
-import mixtoImage from './assets/mixto.jpg'; 
+import mixtoImage from '../assets/mixto.jpg'; 
 
-function LatinCuisine() {
+function Latin() {
   return (
     <div className="latin-cuisine-page">
       <nav className="navbar">Navbar Content</nav>
