@@ -1,4 +1,4 @@
-const { User, Review } = require('../models');
+const { User, Review, Restaurant } = require('../models');
 const { signToken, NewAuthenticationError } = require('../utils/auth');
 
 
@@ -6,6 +6,14 @@ const { signToken, NewAuthenticationError } = require('../utils/auth');
 
 const resolvers = {
   Query: {
+    restaurants: async () => {
+
+      return await Restaurant.find();
+
+    },
+    restaurant: async (parent, { id }) => {
+      return await Restaurant.findById(id);
+    },
     users: async () => {
       return User.find().populate('reviews');
     },

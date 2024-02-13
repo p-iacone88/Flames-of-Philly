@@ -50,6 +50,8 @@ input CommentInput {
     reviews(username: String): [Review]
     review(reviewId: ID!): Review
     me: User
+    restaurant(id: ID!): Restaurant
+    restaurants: [Restaurant]
   }
 
   type Mutation { 
