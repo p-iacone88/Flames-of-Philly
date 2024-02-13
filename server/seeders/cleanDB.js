@@ -1,16 +1,16 @@
 const models = require('../models');
 const db = require('../config/connection');
+const mongoose = require('mongoose'); // Ensure mongoose is imported
 
 module.exports = async (modelName, collectionName) => {
   try {
-    let modelExists = await models[modelName].db.db.listCollections({
-      name: collectionName
-    }).toArray()
-
-    if (modelExists.length) {
+    const db = mongoose.connection.db; // Correctly access the native db object
+    const collections = await db.listCollections({ name: collectionName }).toArray();
+    if (collections.length > 0) {
       await db.dropCollection(collectionName);
     }
   } catch (err) {
-    throw err;
+    console.error(`Error cleaning ${collectionName}:`, err);
+    throw err; // Rethrow or handle as needed
   }
-}
+};
