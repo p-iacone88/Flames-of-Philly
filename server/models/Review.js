@@ -9,6 +9,10 @@ const reviewSchema = new Schema({
     maxlength: 280,
     trim: true,
   },
+  spiceRating: {
+    type: Number,
+    required: true
+  },
   createdAt: {
     type: Date,
     default: Date.now,

@@ -11,6 +11,7 @@ const typeDefs = `
   type Review {
     _id: ID
     reviewText: String
+    spiceRating: Int
     reviewAuthor: String
     createdAt: String
     comments: [Comment]!
@@ -55,7 +56,7 @@ input CommentInput {
   type Mutation { 
     addUser(username: String!, email: String!, password: String!): Auth
     login(email: String!, password: String!): Auth
-    addReview(reviewText: String!): Review
+    addReview(reviewText: String!, spiceRating: Int): Review
     addComment(reviewId: ID!, comment: CommentInput!): Review
     removeReview(reviewId: ID!): Review
     removeComment(reviewId: ID!, commentId: ID!): Review
