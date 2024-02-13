@@ -19,4 +19,4 @@ function HalalCuisine() {
   );
 }
 
-export default HalalCuisine;
+export default Halal;
