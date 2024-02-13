@@ -1,6 +1,6 @@
 import React from 'react';
 import './Halal.css'; // Ensure the CSS file is imported
-import asadsHotChickenImage from './assets/asads.jpg'; // Adjust the path as necessary
+import asadsHotChickenImage from '../assets/asads.jpg'; // Adjust the path as necessary
 
 function HalalCuisine() {
   return (

@@ -4,7 +4,7 @@ import './Home.css';
 const images = [
   '/src/assets/asads.jpg',
   '/src/assets/vistaperu.jpg',
-  '/src/assets/mixto.jpg'
+  '/src/assets/sophieskitchen.jpg'
 ];
 
 const Home = () => {

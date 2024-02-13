@@ -1,6 +1,6 @@
 import React from 'react';
 import './Latin.css'; 
-import mixtoImage from './assets/mixto.jpg'; 
+import mixtoImage from '../assets/mixto.jpg'; 
 
 function LatinCuisine() {
   return (
