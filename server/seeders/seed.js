@@ -4,19 +4,13 @@ const reviewSeeds = require('./reviewSeeds.json');
 const restaurantSeeds = require('./restaurantSeeds.json');
 const cleanDB = require('./cleanDB');
 const db = require('../config/connection');
-// const mongoose = require('mongoose'); // Ensure mongoose is imported
+const mongoose = require('mongoose'); // Ensure mongoose is imported
 
 async function seedDatabase() {
   try {
-    // db = mongoose.connection.db; // Correctly access the native db object
-    // await cleanDB('Review', 'reviews');
-    // await cleanDB('User', 'users');
-    // await cleanDB('Restaurant', 'restaurants');
     await db.dropCollection("users");
     await db.dropCollection("restaurants");
     await db.dropCollection("reviews");
-
-
 
     // Create users
     try {
@@ -35,17 +29,13 @@ async function seedDatabase() {
     }
 
     try {
-
       // Create reviews and link them to users and restaurants
       for (const reviewSeed of reviewSeeds) {
 
-        // console.log();
         const user = await User.findOne({ username: reviewSeed.reviewAuthor });
         console.log(reviewSeed.reviewAuthor);
         console.log(user.username);
 
-
-        // console.log(userData);
         const restaurant = await Restaurant.findOne({ name: reviewSeed.restaurant });
         // console.log(reviewSeed.restaurant);
         // if (!user || !restaurant) {
@@ -54,14 +44,19 @@ async function seedDatabase() {
         // }
 
         try {
-
           console.log(restaurant._id);
           // console.log({ ...reviewSeed });
-          await Review.create({ ...reviewSeed, user: user._id, restaurant: restaurant._id });
+          let newReview = await Review.create({ ...reviewSeed, user: user._id, restaurant: restaurant._id });          // once a review is created grab newReview._id 
+          // find one user and update with the $push on the reviews array of the user
+          // here
+          await User.findOneAndUpdate(
+            { _id: user._id },
+            { $push: { reviews: newReview._id } },
+            { new: true }
+          );
         } catch (error) {
           console.log(error);
         }
-
 
       }
 

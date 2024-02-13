@@ -1,17 +1,6 @@
 const { User, Review, Restaurant } = require('../models');
 const { signToken, NewAuthenticationError } = require('../utils/auth');
 
-// Function to link users to their reviews
-const linkUsersToReviews = (users, reviews) => {
-  return reviews.map(review => {
-    const user = users.find(user => user.username === review.reviewAuthor);
-    if (user) {
-      user.reviews.push(review);
-    }
-    return review;
-  });
-};
-
 const resolvers = {
   Query: {
     restaurants: async () => {
@@ -21,9 +10,9 @@ const resolvers = {
       return await Restaurant.findById(id);
     },
     users: async () => {
-      const users = await User.find();
-      const reviews = await Review.find();
-      return linkUsersToReviews(users, reviews);
+      const users = await User.find().populate('reviews');
+
+      return users;
     },
     user: async (parent, { username }) => {
       const user = await User.findOne({ username });
@@ -72,12 +61,19 @@ const resolvers = {
 
       return { token, user };
     },
-    addReview: async (parent, { review }, context) => {
+    addReview: async (parent, { reviewText, spiceRating }, context) => {
+      console.log("text: ", reviewText, "rating: ", spiceRating);
       if (context.user) {
         const newReview = await Review.create({
-          reviewText: review.reviewText,
+          reviewText: reviewText,
           reviewAuthor: context.user.username,
         });
+
+        // once new review is created update context.user
+        // $push to the reviews array on a user 
+        // const updateUser = await User.findOneAndUpdate({
+        // push the newReview._id onto the users reviews array 
+        // });
         return newReview;
       }
       throw NewAuthenticationError;
