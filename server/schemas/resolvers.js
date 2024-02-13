@@ -72,31 +72,32 @@ const resolvers = {
 
       return { token, user };
     },
-    addReview: async (parent, { reviewText }, context) => {
+    addReview: async (parent, { review }, context) => {
       if (context.user) {
-        const review = await Review.create({
-          reviewText,
+        const newReview = await Review.create({
+          reviewText: review.reviewText,
           reviewAuthor: context.user.username,
         });
-
-        return review;
+        return newReview;
       }
       throw NewAuthenticationError;
     },
-    addComment: async (parent, { reviewId, commentText }, context) => {
+
+    addComment: async (parent, { reviewId, comment }, context) => {
       if (context.user) {
-        return Review.findOneAndUpdate(
+        const updatedReview = await Review.findOneAndUpdate(
           { _id: reviewId },
           {
             $addToSet: {
-              comments: { commentText, commentAuthor: context.user.username },
+              comments: {
+                commentText: comment.commentText,
+                commentAuthor: context.user.username,
+              },
             },
           },
-          {
-            new: true,
-            runValidators: true,
-          }
+          { new: true, runValidators: true }
         );
+        return updatedReview;
       }
       throw NewAuthenticationError;
     },
