@@ -10,15 +10,21 @@ const images = [
 const Home = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
 
+  const nextSlide = () => {
+    setCurrentSlide((prevSlide) => (prevSlide + 1) % images.length);
+  };
+
+  const prevSlide = () => {
+    setCurrentSlide((prevSlide) => (prevSlide - 1 + images.length) % images.length);
+  };
+
   useEffect(() => {
     const timer = setTimeout(() => {
-      setCurrentSlide((prevSlide) =>
-        prevSlide === images.length - 1 ? 0 : prevSlide + 1
-      );
+      nextSlide(); // Use the nextSlide function to advance
     }, 5000); // Change slide every 5 seconds
 
     return () => clearTimeout(timer);
-  }, [currentSlide]);
+  }, [currentSlide]); // This dependency ensures the effect respects manual navigation
 
   return (
     <div className="home-container">
@@ -33,6 +39,8 @@ const Home = () => {
             className="slide"
           />
         ))}
+        <button className="prev" onClick={prevSlide}>&#10094;</button>
+        <button className="next" onClick={nextSlide}>&#10095;</button>
       </div>
     </div>
   );
