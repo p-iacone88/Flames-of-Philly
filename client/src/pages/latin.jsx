@@ -19,4 +19,4 @@ function LatinCuisine() {
   );
 }
 
-export default LatinCuisine;
+export default Latin;
