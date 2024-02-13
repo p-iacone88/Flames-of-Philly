@@ -1,41 +1,49 @@
 const { User, Review, Restaurant } = require('../models');
 const { signToken, NewAuthenticationError } = require('../utils/auth');
 
-
-// leave the addUser, login, me, users, user alone
+// Function to link users to their reviews
+const linkUsersToReviews = (users, reviews) => {
+  return reviews.map(review => {
+    const user = users.find(user => user.username === review.reviewAuthor);
+    if (user) {
+      user.reviews.push(review);
+    }
+    return review;
+  });
+};
 
 const resolvers = {
   Query: {
     restaurants: async () => {
-
       return await Restaurant.find();
-
     },
     restaurant: async (parent, { id }) => {
       return await Restaurant.findById(id);
     },
     users: async () => {
-      return User.find().populate('reviews');
+      const users = await User.find();
+      const reviews = await Review.find();
+      return linkUsersToReviews(users, reviews);
     },
     user: async (parent, { username }) => {
-      return User.findOne({ username }).populate('reviews');
+      const user = await User.findOne({ username });
+      const reviews = await Review.find({ reviewAuthor: username });
+      user.reviews = reviews;
+      return user;
     },
-    // allReviews
-    // allReviews: async () => {
-    //   return Reviews.find()
-    // },
-    // userReviews
     reviews: async (parent, { username }) => {
       const params = username ? { reviewAuthor: username } : {};
       return Review.find(params).sort({ createdAt: -1 });
     },
-    // review by id
     review: async (parent, { reviewId }) => {
       return Review.findOne({ _id: reviewId });
     },
     me: async (parent, args, context) => {
       if (context.user) {
-        return User.findOne({ _id: context.user._id }).populate('reviews');
+        const user = await User.findOne({ _id: context.user._id });
+        const reviews = await Review.find({ reviewAuthor: user.username });
+        user.reviews = reviews;
+        return user;
       }
       throw NewAuthenticationError;
     },
@@ -64,23 +72,18 @@ const resolvers = {
 
       return { token, user };
     },
-    addReview: async (parent, { reviewText, reviewAuthor }, context) => {
+    addReview: async (parent, { reviewText }, context) => {
       if (context.user) {
         const review = await Review.create({
           reviewText,
           reviewAuthor: context.user.username,
         });
 
-        await User.findOneAndUpdate(
-          { _id: context.user._id },
-          { $addToSet: { reviews: review._id } }
-        );
-
         return review;
       }
       throw NewAuthenticationError;
     },
-    addComment: async (parent, { reviewId, commentText, commentAuthor }, context) => {
+    addComment: async (parent, { reviewId, commentText }, context) => {
       if (context.user) {
         return Review.findOneAndUpdate(
           { _id: reviewId },
@@ -103,11 +106,6 @@ const resolvers = {
           _id: reviewId,
           reviewAuthor: context.user.username,
         });
-
-        await User.findOneAndUpdate(
-          { _id: context.user._id },
-          { $pull: { reviews: review._id } }
-        );
 
         return review;
       }
