@@ -5,9 +5,9 @@ import Asian from './pages/Asian.jsx';
 import Halal from './pages/Halal.jsx';
 import Latin from './pages/Latin.jsx';
 import About from './pages/About.jsx';
-import Header from './components/Header.jsx';
-import Navigation from './components/Navigation.jsx';
-import Footer from './components/Footer.jsx';
+import Header from './pages/Header.jsx';
+import Navigation from './pages/Navigation.jsx';
+import Footer from './pages/Footer.jsx';
 
 import './App.css';
 
