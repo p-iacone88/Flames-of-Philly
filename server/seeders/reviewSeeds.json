@@ -2,6 +2,7 @@
     {
         "reviewText": "The spice level at Halal Spice was just perfect - not too hot, not too mild!",
         "reviewAuthor": "Crisco Thomas",
+        "spiceRating": 5,
         "createdAt": "2023-05-13",
         "comments": [
             {
@@ -15,6 +16,7 @@
     {
         "reviewText": "Loved the fiery dishes at Asads Hot Chicken. The heat was intense but enjoyable.",
         "reviewAuthor": "Corby Tender",
+        "spiceRating": 5,
         "createdAt": "2023-06-21",
         "comments": [
             {
@@ -38,6 +40,7 @@
     {
         "reviewText": "The mild spices at the restaurant were perfect for my taste. Great for those who prefer less heat.",
         "reviewAuthor": "Celery Man",
+        "spiceRating": 5,
         "createdAt": "2020-07-25",
         "comments": [],
         "restaurant": "Buddakan"
@@ -45,6 +48,7 @@
     {
         "reviewText": "The spicy food at Casablanca Mediterranean Grill really packs a punch! Not for the faint-hearted.",
         "reviewAuthor": "J.J. Pepper",
+        "spiceRating": 5,
         "createdAt": "2021-12-16",
         "comments": [
             {
@@ -68,6 +72,7 @@
     {
         "reviewText": "Enjoyed the balanced spice levels at Hotclucks. Flavorful but not overwhelming.",
         "reviewAuthor": "James Quall",
+        "spiceRating": 5,
         "createdAt": "2020-02-16",
         "comments": [
             {
@@ -91,6 +96,7 @@
     {
         "reviewText": "The spicy food at King of Tandoor really packs a punch! Not for the faint-hearted.",
         "reviewAuthor": "Dee Vee",
+        "spiceRating": 5,
         "createdAt": "2020-11-08",
         "comments": [
             {
@@ -104,6 +110,7 @@
     {
         "reviewText": "I found it a bit too spicy for my liking, but still good.",
         "reviewAuthor": "David Liebe Hart",
+        "spiceRating": 5,
         "createdAt": "2023-10-27",
         "comments": [],
         "restaurant": "Cafe Soho"
@@ -111,6 +118,7 @@
     {
         "reviewText": "Perfect for someone like me who can't handle too much heat.",
         "reviewAuthor": "Tony Cheese",
+        "spiceRating": 5,
         "createdAt": "2023-02-14",
         "comments": [
             {
@@ -124,6 +132,7 @@
     {
         "reviewText": "It was so spicy, I needed lots of water! But loved it.",
         "reviewAuthor": "Richard Dunn",
+        "spiceRating": 5,
         "createdAt": "2022-11-09",
         "comments": [],
         "restaurant": "Han Dynasty"
@@ -131,6 +140,7 @@
     {
         "reviewText": "The spices were indeed well-balanced, made for a great meal.",
         "reviewAuthor": "Dr. Steve Brule",
+        "spiceRating": 5,
         "createdAt": "2021-06-13",
         "comments": [],
         "restaurant": "Tamarind"
