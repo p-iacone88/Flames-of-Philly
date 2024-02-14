@@ -1,38 +1,26 @@
-// SingleRestaurant.jsx
-
-import React, { useState, useEffect } from 'react';
-import { useParams } from 'react-router-dom'; // Import useParams to get the restaurant ID from the URL
-import { getRestaurantById } from './queries'; // Assuming your queries.js file is in the same directory
+import React from 'react';
+import { useParams } from 'react-router-dom';
+import { useQuery } from '@apollo/client';
+import { GET_RESTAURANT } from './queries';
 
 const SingleRestaurant = () => {
-  const { id } = useParams(); // Get the restaurant ID from the URL
-  const [restaurant, setRestaurant] = useState(null);
+  const { id } = useParams();
+  const { loading, error, data } = useQuery(GET_RESTAURANT, {
+    variables: { id }
+  });
 
-  useEffect(() => {
-    // Fetch restaurant data when the component mounts
-    fetchRestaurant();
-  }, []);
+  if (loading) return <p>Loading...</p>;
+  if (error) return <p>Error: {error.message}</p>;
 
-  const fetchRestaurant = async () => {
-    try {
-      const response = await getRestaurantById(id);
-      setRestaurant(response);
-    } catch (error) {
-      console.error('Error fetching restaurant:', error);
-    }
-  };
+  const { restaurant } = data;
 
   return (
     <div>
-      {restaurant ? (
-        <div>
-          <h1>{restaurant.name}</h1>
-          <p>{restaurant.description}</p>
-          {/* Display other details about the restaurant, such as reviews and comments */}
-        </div>
-      ) : (
-        <p>Loading...</p>
-      )}
+      <h1>{restaurant.name}</h1>
+      <p>{restaurant.address}</p>
+      <p>Rating: {restaurant.rating}</p>
+      <p>Spice Rating: {restaurant.spiceRating}</p>
+      {/* Perhaps a description of the restaurant */}
     </div>
   );
 };
