@@ -1,54 +1,85 @@
 import { gql } from '@apollo/client';
 
-export const LOGIN_USER = gql`
-  mutation login($email: String!, $password: String!) {
-    login(email: $email, password: $password) {
-      token
-      user {
-        _id
-        username
-      }
-    }
-  }
-`;
-
 export const ADD_USER = gql`
-  mutation addUser($username: String!, $email: String!, $password: String!) {
+  mutation AddUser($username: String!, $email: String!, $password: String!) {
     addUser(username: $username, email: $email, password: $password) {
       token
       user {
         _id
         username
+        email
       }
     }
   }
 `;
 
-export const ADD_THOUGHT = gql`
-  mutation addThought($thoughtText: String!) {
-    addThought(thoughtText: $thoughtText) {
-      _id
-      thoughtText
-      thoughtAuthor
-      createdAt
-      comments {
+export const LOGIN = gql`
+  mutation Login($email: String!, $password: String!) {
+    login(email: $email, password: $password) {
+      token
+      user {
         _id
-        commentText
+        username
+        email
       }
+    }
+  }
+`;
+
+export const ADD_REVIEW = gql`
+  mutation AddReview($reviewText: String!, $spiceRating: Int) {
+    addReview(reviewText: $reviewText, spiceRating: $spiceRating) {
+      _id
+      reviewText
+      spiceRating
+      reviewAuthor
+      createdAt
     }
   }
 `;
 
 export const ADD_COMMENT = gql`
-  mutation addComment($thoughtId: ID!, $commentText: String!) {
-    addComment(thoughtId: $thoughtId, commentText: $commentText) {
+  mutation AddComment($reviewId: ID!, $comment: CommentInput!) {
+    addComment(reviewId: $reviewId, comment: $comment) {
       _id
-      thoughtText
-      thoughtAuthor
+      reviewText
+      spiceRating
+      reviewAuthor
       createdAt
       comments {
         _id
         commentText
+        commentAuthor
+        createdAt
+      }
+    }
+  }
+`;
+
+export const REMOVE_REVIEW = gql`
+  mutation RemoveReview($reviewId: ID!) {
+    removeReview(reviewId: $reviewId) {
+      _id
+      reviewText
+      spiceRating
+      reviewAuthor
+      createdAt
+    }
+  }
+`;
+
+export const REMOVE_COMMENT = gql`
+  mutation RemoveComment($reviewId: ID!, $commentId: ID!) {
+    removeComment(reviewId: $reviewId, commentId: $commentId) {
+      _id
+      reviewText
+      spiceRating
+      reviewAuthor
+      createdAt
+      comments {
+        _id
+        commentText
+        commentAuthor
         createdAt
       }
     }
