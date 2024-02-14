@@ -14,7 +14,7 @@ import Navigation from './pages/Navigation.jsx';
 
 // Set up Apollo Client
 const client = new ApolloClient({
-  uri: 'process.env.MONGODB_URI', // Replace with your GraphQL API endpoint
+  uri: '/graphql', // Replace with your GraphQL API endpoint
   cache: new InMemoryCache(),
 });
 
