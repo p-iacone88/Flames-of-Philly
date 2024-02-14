@@ -1,0 +1,28 @@
+.navbar {
+    background-color: #DBEE7B;
+    overflow: hidden;
+  }
+  
+  .nav-links {
+    list-style: none; /* Ensures no bullet points are displayed */
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: right; /* Adjust spacing as needed */
+  }
+  
+  .nav-item {
+    display: block;
+    color: black;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    transition: background-color 0.3s ease-in-out;
+    font-family: 'Rubik Marker Hatch', cursive; /* Ensures the custom font is applied */
+  }
+  
+  .nav-item:hover {
+    background-color: #B84040;
+    color: #E2C85B; /* Adjusts the color on hover for better visibility */
+  }
+  
