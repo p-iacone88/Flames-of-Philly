@@ -25,7 +25,10 @@ function Navigation() {
                     <Link to="/latin" className="text-black p-2 hover:bg-red-600 hover:text-yellow-300 transition-colors duration-300">Latin Delights</Link>
                 </li>
                 <li className="mx-2">
-                    <Link to="/about" className="text-black p-2 hover:bg-red-600 hover:text-yellow-300 transition-colors duration-300">About Us</Link>
+                    <Link to="/login" className="text-black p-2 hover:bg-red-600 hover:text-yellow-300 transition-colors duration-300">Login</Link>
+                </li>
+                <li className="mx-2">
+                    <Link to="/signup" className="text-black p-2 hover:bg-red-600 hover:text-yellow-300 transition-colors duration-300">Signup</Link>
                 </li>
             </ul>
         </nav>
