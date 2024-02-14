@@ -1,7 +1,12 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Link } from 'react-router-dom'; // Assuming you're using react-router-dom for navigation
 
 function Navigation() {
+    const [isOpen, setIsOpen] = useState(false);
+    const toggleDropdown = () => {
+        setIsOpen(!isOpen);
+    };
+
     return (
         <nav className="navbar">
             <ul className="nav-links">

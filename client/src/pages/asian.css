@@ -14,7 +14,7 @@
   }
   
   .title {
-    background-color: grey;
+    background-color: rgba(190, 190, 190, 0.5) !important;
     color: black;
     font-size: 24px;
     font-weight: bold;
