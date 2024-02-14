@@ -16,7 +16,7 @@ function Navigation() {
                     <Link to="/" className="text-black p-2 hover:bg-red-600 hover:text-yellow-300 transition-colors duration-300">Home</Link>
                 </li>
                 <li className="mx-2">
-                    <Link to="/restaurant" className="text-black p-2 hover:bg-red-600 hover:text-yellow-300 transition-colors duration-300">Restaurants</Link>
+                    <Link to="/restaurant" className="text-black p-2 hover:bg-red-600 hover:text-yellow-300 transition-colors duration-300">Restaurant</Link>
                 </li>
                 <li className="mx-2">
                     <Link to="/restaurant/:id" className="text-black p-2 hover:bg-red-600 hover:text-yellow-300 transition-colors duration-300">Restaurant</Link>
