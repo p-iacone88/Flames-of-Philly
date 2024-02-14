@@ -7,12 +7,12 @@ import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 
 import Home from './pages/Home.jsx';
 import RestaurantList from './pages/RestaurantList.jsx';
-import SingleRestaurant from './pages/SingleRestaurant.jsx';
 import Login from './pages/Login.jsx';
 import Signup from './pages/Signup.jsx';
 // import Navigation from './pages/Navigation.jsx';
 import Footer from './pages/Footer.jsx';
 import NotFound from './pages/NotFound';
+import SingleRestaurant from './pages/SingleRestaurant.jsx';
 
 const router = createBrowserRouter([
   {
