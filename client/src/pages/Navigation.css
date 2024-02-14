@@ -1,28 +1,40 @@
+/* Navigation.css */
 .navbar {
     background-color: #DBEE7B;
-    overflow: hidden;
+    display: flex;
+    align-items: center; /* Align items vertically */
+    justify-content: flex-start; /* Align items horizontally to the start */
+    padding: 8px 16px; /* Add padding around the navbar content */
+  }
+  
+  .nav-logo-container {
+    margin-right: 16px; /* Add some space after the logo */
+  }
+  
+  .nav-logo {
+    height: 60px; /* Reduced height for the logo */
+    width: auto; /* Maintain aspect ratio */
   }
   
   .nav-links {
-    list-style: none; /* Ensures no bullet points are displayed */
+    list-style-type: none;
+    display: flex;
+    align-items: center; /* Align the links vertically */
     margin: 0;
     padding: 0;
-    display: flex;
-    justify-content: right; /* Adjust spacing as needed */
   }
   
   .nav-item {
-    display: block;
+    display: flex;
+    align-items: center;
     color: black;
-    text-align: center;
-    padding: 14px 16px;
+    padding: 8px 12px; /* Adjust padding for each link */
     text-decoration: none;
     transition: background-color 0.3s ease-in-out;
-    font-family: 'Rubik Marker Hatch', cursive; /* Ensures the custom font is applied */
   }
   
   .nav-item:hover {
     background-color: #B84040;
-    color: #E2C85B; /* Adjusts the color on hover for better visibility */
+    color: #E2C85B;
   }
   
