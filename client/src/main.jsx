@@ -27,7 +27,22 @@ const router = createBrowserRouter([
       }, {
         path: '/asian',
         element: <Asian />
-      }, 
+      }, {
+        path: '/halal',
+        element: <Halal />
+      }, {
+        path: '/latin',
+        element: <Latin />
+      }, {
+        path: '/login',
+        element: <Login />
+      }, {
+        path: '/signup',
+        element: <Signup />
+      }, {
+        path: '/footer',
+        element: <Footer />
+      }
     ],
   },
 ]);
