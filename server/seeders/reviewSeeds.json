@@ -14,7 +14,7 @@
         "restaurant": "Mixto Restaurante"
     },
     {
-        "reviewText": "Loved the fiery dishes at Asads Hot Chicken. The heat was intense but enjoyable.",
+        "reviewText": "Loved the fiery dishes at Asad's Hot Chicken. The heat was intense but enjoyable.",
         "reviewAuthor": "Corby Tender",
         "spiceRating": 5,
         "createdAt": "2023-06-21",
@@ -35,7 +35,7 @@
                 "createdAt": "2020-07-07"
             }
         ],
-        "restaurant": "Asads Hot Chicken"
+        "restaurant": "Asad's Hot Chicken"
     },
     {
         "reviewText": "The mild spices at the restaurant were perfect for my taste. Great for those who prefer less heat.",
