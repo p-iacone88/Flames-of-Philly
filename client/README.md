@@ -39,7 +39,7 @@ To run a local copy of this project, follow these simple steps.
 This site serves as a gateway to the mouthwatering world of Flames of Philly. Explore, indulge, and let us spice up your day.
 
 ### Contributors
-Contributors help make this project possible. From minor tweaks to major contributions, all are immensely appreciated.
+The following individuals contributed to the project:
 
 <li>Evan Beck: https://github.com/Evan-Beck</li>
 <li>Kenny Cummings: https://github.com/kennycummings</li>
