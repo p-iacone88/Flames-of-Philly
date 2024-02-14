@@ -7,7 +7,7 @@ const resolvers = {
       return await Restaurant.find();
     },
     restaurant: async (parent, { id }) => {
-      return await Restaurant.findById(id);
+      return await Restaurant.findById(id).populate('reviews');
     },
     users: async () => {
       const users = await User.find().populate('reviews');
@@ -66,6 +66,7 @@ const resolvers = {
       if (context.user) {
         const newReview = await Review.create({
           reviewText: reviewText,
+          spiceRating: spiceRating,
           reviewAuthor: context.user.username,
         });
 
@@ -74,6 +75,10 @@ const resolvers = {
         // const updateUser = await User.findOneAndUpdate({
         // push the newReview._id onto the users reviews array 
         // });
+        await Restaurant.findOneAndUpdate(
+          { _id: context.restaurant._id },
+          { $push: { reviews: newReview._id } }
+        );
         return newReview;
       }
       throw NewAuthenticationError;
