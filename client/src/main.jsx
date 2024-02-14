@@ -6,9 +6,8 @@ import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 
 
 import Home from './pages/Home.jsx';
-import Asian from './pages/Asian.jsx';
-import Halal from './pages/Halal.jsx';
-import Latin from './pages/Latin.jsx';
+import RestaurantList from './pages/RestaurantList.jsx';
+import SingleRestaurant from './pages/SingleRestaurant.jsx';
 import Login from './pages/Login.jsx';
 import Signup from './pages/Signup.jsx';
 // import Navigation from './pages/Navigation.jsx';
@@ -25,14 +24,11 @@ const router = createBrowserRouter([
         index: true,
         element: <Home />
       }, {
-        path: '/asian',
-        element: <Asian />
+        path: '/restaurant',
+        element: <RestaurantList />
       }, {
-        path: '/halal',
-        element: <Halal />
-      }, {
-        path: '/latin',
-        element: <Latin />
+        path: '/restaurant/:id',
+        element: <SingleRestaurant />
       }, {
         path: '/login',
         element: <Login />

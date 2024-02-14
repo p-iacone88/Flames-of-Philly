@@ -1,7 +1,7 @@
 import React from 'react';
 import { useParams } from 'react-router-dom';
 import { useQuery } from '@apollo/client';
-import { GET_RESTAURANT } from './queries';
+import { GET_RESTAURANT } from '../utils/queries';
 
 const SingleRestaurant = () => {
   const { id } = useParams();

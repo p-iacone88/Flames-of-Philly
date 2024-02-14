@@ -16,13 +16,10 @@ function Navigation() {
                     <Link to="/" className="text-black p-2 hover:bg-red-600 hover:text-yellow-300 transition-colors duration-300">Home</Link>
                 </li>
                 <li className="mx-2">
-                    <Link to="/asian" className="text-black p-2 hover:bg-red-600 hover:text-yellow-300 transition-colors duration-300">Asian Cuisine</Link>
+                    <Link to="/restaurant" className="text-black p-2 hover:bg-red-600 hover:text-yellow-300 transition-colors duration-300">Restaurants</Link>
                 </li>
                 <li className="mx-2">
-                    <Link to="/halal" className="text-black p-2 hover:bg-red-600 hover:text-yellow-300 transition-colors duration-300">Halal Options</Link>
-                </li>
-                <li className="mx-2">
-                    <Link to="/latin" className="text-black p-2 hover:bg-red-600 hover:text-yellow-300 transition-colors duration-300">Latin Delights</Link>
+                    <Link to="/restaurant/:id" className="text-black p-2 hover:bg-red-600 hover:text-yellow-300 transition-colors duration-300">Restaurant</Link>
                 </li>
                 <li className="mx-2">
                     <Link to="/login" className="text-black p-2 hover:bg-red-600 hover:text-yellow-300 transition-colors duration-300">Login</Link>

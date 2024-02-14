@@ -1,7 +1,7 @@
 import React from 'react';
 import { useQuery } from '@apollo/client';
 import { Link } from 'react-router-dom';
-import { GET_RESTAURANTS } from './queries';
+import { GET_RESTAURANTS } from '../utils/queries';
 
 const RestaurantList = () => {
   const { loading, error, data } = useQuery(GET_RESTAURANTS);
