@@ -1,9 +1,12 @@
 import React from 'react';
-import { Link } from 'react-router-dom'; // Assuming you're using react-router-dom for navigation
+import { Link } from 'react-router-dom';
 
 function Navigation() {
     return (
         <nav className="navbar">
+            <div className="nav-logo-container">
+                <img src="/src/assets/flames-of-philly-chili-pepper-logo-transparent-tiny.png" alt="Flames of Philly Logo" className="nav-logo" />
+            </div>
             <ul className="nav-links">
                 <li><Link to="/" className="nav-item">Home</Link></li>
                 <li><Link to="/asian" className="nav-item">Asian Cuisine</Link></li>
