@@ -1,34 +1,36 @@
-import { useState } from 'react';
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import Home from './pages/Home.jsx';
-import Asian from './pages/Asian.jsx';
-import Halal from './pages/Halal.jsx';
-import Latin from './pages/Latin.jsx';
-import About from './pages/About.jsx';
-import Header from './pages/Header.jsx';
-import Navigation from './pages/Navigation.jsx';
-import Footer from './pages/Footer.jsx';
+
+
+// Import necessary libraries and components
+import React from 'react';
+import { Outlet } from 'react-router-dom';
+import { ApolloClient, InMemoryCache, ApolloProvider } from '@apollo/client';
+
+// Import your components
 
 import './App.css';
+import Footer from './pages/Footer.jsx';
+import Header from './pages/Header.jsx';
+import Navigation from './pages/Navigation.jsx';
+
+// Set up Apollo Client
+const client = new ApolloClient({
+  uri: 'process.env.MONGODB_URI', // Replace with your GraphQL API endpoint
+  cache: new InMemoryCache(),
+});
 
 function App() {
   return (
-    <Router>
+    <ApolloProvider client={client}>
+
       <div>
         <Header />
         <Navigation />
-
-        <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/asian" element={<Asian />} />
-          <Route path="/halal" element={<Halal />} />
-          <Route path="/latin" element={<Latin />} />
-          <Route path="/about" element={<About />} />
-        </Routes>
+        <Outlet />
 
         <Footer />
       </div>
-    </Router>
+
+    </ApolloProvider>
   );
 }
 
