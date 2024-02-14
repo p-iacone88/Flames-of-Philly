@@ -1,8 +1,8 @@
 .home-container {
   padding: 25px;
   text-align: center;
-  background-color: #EF5353; /* Set the background to white */
-  color: black; /* Set the text color to black */
+  background-color: #EF5353;
+  color: black;
 }
 
 .slideshow-container {
@@ -15,9 +15,9 @@
 }
 
 .slide {
-  width: auto; /* Adjust width automatically based on the height */
-  height: 750px; /* Fixed height for all images */
-  max-width: 100%; /* Ensure the image does not exceed the container's width */
+  width: 100%;
+  height: auto;
+  max-width: 100%;
   transition: opacity 0.5s ease-in-out;
 }
 
@@ -50,4 +50,14 @@
 .prev:hover, .next:hover {
   background-color: rgba(0,0,0,0.1); /* Slightly darker background on hover */
   color: black; /* Ensure the arrow color remains black */
+}
+
+body {
+  background-image: url("../src/assets/chili-pepper.png");
+  background-repeat: repeat;
+  background-size: 200px 200px;
+  background-position: center;
+  background-blend-mode: normal;
+  background-position: -50px -50px;
+  background-color: rgba(0, 0, 0, 0.05);
 }
