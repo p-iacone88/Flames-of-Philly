@@ -22,7 +22,13 @@ const restaurantSchema = new Schema({
     min: 1,
     max: 5,
     required: true
-  }
+  },
+  reviews: [
+    {
+      type: Schema.Types.ObjectId,
+      ref: 'Review'
+    }
+  ]
 });
 
 

@@ -10,10 +10,10 @@ const typeDefs = `
 
   type Review {
     _id: ID
-    reviewText: String
-    spiceRating: Int
-    reviewAuthor: String
-    createdAt: String
+    reviewText: String!
+    spiceRating: Int!
+    reviewAuthor: String!
+    createdAt: String!
     comments: [Comment]!
     user: User!
     restaurant: Restaurant!
@@ -25,6 +25,7 @@ const typeDefs = `
     address: String!
     rating: Int!
     spiceRating: Int!
+    reviews: [Review]
   }
   type Comment {
     _id: ID
@@ -38,7 +39,7 @@ const typeDefs = `
     user: User
   }
 input ReviewInput {
-  reviewTest: String!
+  reviewText: String!
 }
 input CommentInput {
   commentText: String!

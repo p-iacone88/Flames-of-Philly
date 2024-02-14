@@ -20,6 +20,17 @@ export const GET_RESTAURANT = gql`
       address
       rating
       spiceRating
+      reviews {
+        _id
+        reviewText
+        spiceRating
+        comments {
+          _id
+          commentText
+          commentAuthor
+          createdAt
+        }
+      }
     }
   }
 `;

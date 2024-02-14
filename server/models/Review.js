@@ -6,7 +6,7 @@ const reviewSchema = new Schema({
     type: String,
     required: 'Leave your review',
     minlength: 1,
-    maxlength: 280,
+    maxlength: 2000,
     trim: true,
   },
   spiceRating: {
