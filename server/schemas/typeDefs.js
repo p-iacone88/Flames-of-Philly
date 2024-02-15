@@ -40,6 +40,7 @@ const typeDefs = `
   }
 input ReviewInput {
   reviewText: String!
+  spiceRating: Int
 }
 input CommentInput {
   commentText: String!
