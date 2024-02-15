@@ -2,6 +2,7 @@ import React from 'react';
 import { useQuery } from '@apollo/client';
 import { Link } from 'react-router-dom';
 import { GET_RESTAURANTS } from '../utils/queries';
+import './RestaurantList.css';
 
 const RestaurantList = () => {
   const { loading, error, data } = useQuery(GET_RESTAURANTS);
@@ -29,3 +30,4 @@ const RestaurantList = () => {
 };
 
 export default RestaurantList;
+
