@@ -1,5 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import './Home.css';
+import Footer from './Footer';
+
 
 const images = [
   '/src/assets/asads.jpg',
@@ -45,5 +47,7 @@ const Home = () => {
     </div>
   );
 };
+
+
 
 export default Home;
