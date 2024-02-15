@@ -11,6 +11,7 @@ module.exports = {
     },
   }),
   authMiddleware: function ({ req }) {
+    console.log("hit auth middleware")
     let token = req.body.token || req.query.token || req.headers.authorization;
 
     if (req.headers.authorization) {
@@ -24,6 +25,7 @@ module.exports = {
     try {
       const { authenticatedPerson } = jwt.verify(token, secret, { maxAge: expiration });
       req.user = authenticatedPerson;
+      console.log(req.user)
     } catch {
       console.log('Invalid token');
     }

@@ -62,14 +62,16 @@ const resolvers = {
       return { token, user };
     },
     addReview: async (parent, { restaurantId, reviewText, spiceRating }, context) => {
+      console.log(context.user);
       if (context.user) {
+        console.log("hello!");
         const newReview = await Review.create({
           reviewText,
           spiceRating,
           reviewAuthor: context.user.username,
           restaurant: restaurantId,
         });
-
+        console.log(newReview);
         await Restaurant.findOneAndUpdate(
           { _id: restaurantId },
           { $push: { reviews: newReview._id } }
