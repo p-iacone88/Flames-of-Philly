@@ -61,28 +61,24 @@ const resolvers = {
 
       return { token, user };
     },
-    addReview: async (parent, { reviewText, spiceRating }, context) => {
-      console.log("text: ", reviewText, "rating: ", spiceRating);
+    addReview: async (parent, { restaurantId, review }, context) => {
       if (context.user) {
         const newReview = await Review.create({
-          reviewText: reviewText,
-          spiceRating: spiceRating,
+          ...review,
           reviewAuthor: context.user.username,
+          restaurant: restaurantId,
         });
 
-        // once new review is created update context.user
-        // $push to the reviews array on a user 
-        // const updateUser = await User.findOneAndUpdate({
-        // push the newReview._id onto the users reviews array 
-        // });
         await Restaurant.findOneAndUpdate(
-          { _id: context.restaurant._id },
+          { _id: restaurantId },
           { $push: { reviews: newReview._id } }
         );
+
         return newReview;
       }
       throw NewAuthenticationError;
     },
+
 
     addComment: async (parent, { reviewId, comment }, context) => {
       if (context.user) {
