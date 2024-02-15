@@ -64,6 +64,7 @@ body {
 }
 
 .how-this-works-section {
+  border-top: 15px solid #DBEEB7;
   background-color: #EF5353;
   color: black;
   text-align: center;
@@ -91,6 +92,9 @@ body {
 
 .how-this-works-section .content p {
   max-width: 50%;
+  font-size: 19px;
+  line-height: 2.5;
+  border-radius: 10px;
 }
 
 .how-this-works-section .content img {

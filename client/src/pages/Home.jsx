@@ -45,12 +45,16 @@ const Home = () => {
         <button className="next" onClick={nextSlide}>&#10095;</button>
       </div>
 
-      <hr className="hr-divider" />
+      
     
  <div className="how-this-works-section">
  <h2>How This Works</h2>
  <div className="content">
-   <p>Your paragraph text goes here. Explain how your service or website works, keeping the explanation straightforward and concise for your visitors.</p>
+ <p className="how-this-works-paragraph">
+    Welcome to Flames of Philly. Here, you will find all of the spiciest spots Philly has to offer.
+    By clicking the buttons above or all restaurants, you will be able to view what has been rated as some
+    of the hottest joints in the city. From Asian cuisine, to Latin delights, Halal options and so much more
+    that Philly has to offer. Make sure to use our spice rating system to help spread the word for some of Philly's finest! </p>
    <img src="/src/assets/gojjo.jpg" alt="Descriptive Alt Text" className="how-this-works-image" />
  </div>
 </div>

@@ -12,8 +12,36 @@ function Footer() {
         <div>
           {/* <img src="/../../assets/tiny.png" alt="Flames of Philly" /> */}
         </div>
-  
         <div className="footer--items">
+      <ul>
+        <li>
+          <Link to="/" className="text-md">Home</Link> {/* Use Link from react-router-dom */}
+        </li>
+        <li>
+          <Link to="/restaurant" className="text-md">Hot Restaurants</Link> {/* Correct path for Hot Restaurants */}
+        </li>
+        <li>
+          <Link to="/login" className="text-md">Login</Link> {/* Correct path for Login */}
+        </li>
+        <li>
+          <Link to="/signup" className="text-md">Sign up</Link> {/* Correct path for Sign up */}
+        </li>
+        </ul>
+        </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+  
+        {/* <div className="footer--items">
           <ul>
             <li>
               <Link
@@ -175,7 +203,7 @@ function Footer() {
             </li>
           </ul>
         </div>
-      </div>
+      </div> */}
       <hr className="divider" />
       <div className="footer--content--container">
         {/* <p className="footer--content">Made with 💖 by John</p> */}

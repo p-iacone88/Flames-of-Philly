@@ -20,26 +20,12 @@ const SingleRestaurant = () => {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    console.log(data)
     try {
       if (!data || !data.restaurant) {
         console.error('Restaurant data is not available');
         return;
       }
 
-feature/addReview
-      try {
-        console.log(id, reviewText, spiceRating);
-        await addReview({
-          variables: {
-            restaurantId: id, // Use the restaurant ID from the URL
-            reviewText,
-            spiceRating
-          }
-        });
-      } catch (error) {
-        console.log(error);
-      }
       await addReview({
         variables: { restaurantId: data.restaurant._id, reviewText, spiceRating }
       });
