@@ -1,5 +1,6 @@
 
 .footer--container {
+    border-top: 15px solid #DBEEB7;
     display: flex;
     flex-direction: column;
     align-items: center;
