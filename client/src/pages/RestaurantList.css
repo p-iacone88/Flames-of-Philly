@@ -1,0 +1,49 @@
+div {
+  padding: 20px;
+}
+
+h1 {
+  color: black;
+  text-align: center;
+  margin-bottom: 24px;
+}
+
+ul {
+  list-style-type: none; /* Removes the default list styling */
+  padding: 0;
+}
+
+li {
+  background-color: #fff; /* White background */
+  border: 1px solid #e2e8f0; /* Light gray border */
+  border-radius: 0.375rem; /* Slightly rounded corners */
+  padding: 20px;
+  margin-bottom: 16px; /* Space between list items */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+}
+
+li h2 {
+  color: black;
+  margin-bottom: 8px;
+}
+
+li p {
+  color: black;
+  margin: 4px 0; /* Slight margin for paragraph separation */
+}
+
+a {
+  text-decoration: none; /* Removes underline from links */
+  color: inherit; /* Inherits the color from the parent element */
+}
+
+ a:hover {
+    /* background-color: #B84040;  */
+    color: #E2C85B;
+}
+
+li h2:hover {
+    background-color: #B84040; 
+    color: #E2C85B; 
+  }
+   

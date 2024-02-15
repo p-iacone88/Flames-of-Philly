@@ -1,0 +1,60 @@
+div {
+    padding: 20px;
+  }
+  
+   h1, h2, h4 {
+    color: black;
+    background-color: white;
+  } 
+  
+    p { 
+     color: black;
+    margin: 5px 0; 
+     background-color: white; 
+   }  
+  
+  ul {
+    list-style-type: none; /* Removes the default list styling */
+    padding: 0;
+  }
+  
+  li {
+     background-color: #f7fafc; 
+    border: 1px solid #e2e8f0; 
+    border-radius: 5px; 
+    padding: 10px;
+    margin-bottom: 10px; 
+  }
+  
+  form {
+    margin-top: 20px;
+  }
+  
+  textarea, input[type="number"] {
+    display: block;
+    width: 100%; /* Full width */
+    padding: 10px; /* Comfortable padding */
+    margin: 10px 0; /* Space around inputs */
+    border: 1px solid #e2e8f0; /* Consistent border */
+    border-radius: 5px; /* Slightly rounded corners */
+  }
+  
+  button {
+     background-color: #DBEEB7;
+    color: black;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px; /* Slightly rounded corners */
+    cursor: pointer; /* Pointer on hover */
+    display: inline-block; /* Proper spacing */
+    
+  }
+  
+   button:hover {
+      background-color: #acbb62; /* A slightly darker shade on hover;  */
+  } 
+  
+  button:hover {
+    background-color: #B84040; 
+    color: #E2C85B; 
+  } 

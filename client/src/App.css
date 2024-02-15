@@ -1,9 +1,16 @@
+body, html {
+  margin: -50px;
+  padding: 0;
+}
+
+
 #root {
   max-width: 1280px;
   margin: 0 auto;
   padding: 2rem;
   text-align: center;
 }
+
 
 .logo {
   height: 6em;
@@ -41,3 +48,10 @@
   color: #888;
 }
 
+.hr-divider {
+  width: 100%;
+  border: 0;
+  height: 1px;
+  background-color: #ccc; /* Adjust the color as needed */
+  margin: 20px 0; /* Adjust spacing as needed */
+}

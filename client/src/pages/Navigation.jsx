@@ -17,7 +17,7 @@ function Navigation() {
                     <Link to="/" className="nav-item">Home</Link>
                 </li>
                 <li>
-                    <Link to="/restaurant" className="nav-item">Restaurant</Link>
+                    <Link to="/restaurant" className="nav-item">Hot Restaurants</Link>
                 </li>
                 <li>
                     <Link to="/login" className="nav-item">Login</Link>

@@ -1,5 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import './Home.css';
+import Footer from './Footer';
+
 
 const images = [
   '/src/assets/asads.jpg',
@@ -42,8 +44,19 @@ const Home = () => {
         <button className="prev" onClick={prevSlide}>&#10094;</button>
         <button className="next" onClick={nextSlide}>&#10095;</button>
       </div>
-    </div>
-  );
+
+      <hr className="hr-divider" />
+    
+ <div className="how-this-works-section">
+ <h2>How This Works</h2>
+ <div className="content">
+   <p>Your paragraph text goes here. Explain how your service or website works, keeping the explanation straightforward and concise for your visitors.</p>
+   <img src="/src/assets/gojjo.jpg" alt="Descriptive Alt Text" className="how-this-works-image" />
+ </div>
+</div>
+</div>
+);
 };
+
 
 export default Home;
