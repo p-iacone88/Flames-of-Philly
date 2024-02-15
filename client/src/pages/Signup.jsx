@@ -49,7 +49,7 @@ const Signup = () => {
     };
 
     return (
-        <main className="flex-row justify-center mb-4">
+        <main className="flex-row justify-start mb-4">
             <div className="w-full max-w-md">
                 <div className="bg-white shadow-md rounded px-8 pt-6 pb-8 mb-4">
                     <h4 className="text-2xl font-bold text-gray-900 mb-4">Sign Up</h4>
