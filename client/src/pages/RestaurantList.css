@@ -37,13 +37,13 @@ a {
   color: inherit; /* Inherits the color from the parent element */
 }
 
-a:hover {
-    background-color: #B84040; /* Hover background color */
-    color: #E2C85B; /* Hover text color */
+ a:hover {
+    /* background-color: #B84040;  */
+    color: #E2C85B;
 }
 
 li h2:hover {
-    background-color: #B84040; /* Hover background color */
-    color: #E2C85B; /* Hover text color */
+    background-color: #B84040; 
+    color: #E2C85B; 
   }
-  
+   

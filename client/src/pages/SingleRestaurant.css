@@ -2,16 +2,16 @@ div {
     padding: 20px;
   }
   
-  h1, h2, h4 {
+   h1, h2, h4 {
     color: black;
     background-color: white;
-  }
+  } 
   
-  p {
-    color: black;
-    margin: 5px 0;
-    background-color: white;
-  }
+    p { 
+     color: black;
+    margin: 5px 0; 
+     background-color: white; 
+   }  
   
   ul {
     list-style-type: none; /* Removes the default list styling */
@@ -19,11 +19,11 @@ div {
   }
   
   li {
-    background-color: #f7fafc; /* A very light gray background */
-    border: 1px solid #e2e8f0; /* A light gray border */
-    border-radius: 5px; /* Slightly rounded corners */
+     background-color: #f7fafc; 
+    border: 1px solid #e2e8f0; 
+    border-radius: 5px; 
     padding: 10px;
-    margin-bottom: 10px; /* Space between list items */
+    margin-bottom: 10px; 
   }
   
   form {
@@ -40,20 +40,21 @@ div {
   }
   
   button {
-    background-color: #DBEE7B;
+     background-color: #DBEEB7;
     color: black;
     padding: 10px 20px;
     border: none;
     border-radius: 5px; /* Slightly rounded corners */
     cursor: pointer; /* Pointer on hover */
     display: inline-block; /* Proper spacing */
+    
   }
   
-  button:hover {
-    background-color: #acbb62; /* A slightly darker shade on hover */
-  }
+   button:hover {
+      background-color: #acbb62; /* A slightly darker shade on hover;  */
+  } 
   
   button:hover {
-    background-color: #B84040; /* Hover background color */
-    color: #E2C85B; /* Hover text color */
-  }
+    background-color: #B84040; 
+    color: #E2C85B; 
+  } 
