@@ -61,10 +61,11 @@ const resolvers = {
 
       return { token, user };
     },
-    addReview: async (parent, { restaurantId, review }, context) => {
+    addReview: async (parent, { restaurantId, reviewText, spiceRating }, context) => {
       if (context.user) {
         const newReview = await Review.create({
-          ...review,
+          reviewText,
+          spiceRating,
           reviewAuthor: context.user.username,
           restaurant: restaurantId,
         });
@@ -78,7 +79,6 @@ const resolvers = {
       }
       throw NewAuthenticationError;
     },
-
 
     addComment: async (parent, { reviewId, comment }, context) => {
       if (context.user) {

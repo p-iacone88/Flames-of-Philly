@@ -58,7 +58,7 @@ input CommentInput {
   type Mutation { 
     addUser(username: String!, email: String!, password: String!): Auth
     login(email: String!, password: String!): Auth
-    addReview(reviewText: String!, spiceRating: Int): Review
+    addReview(restaurantId: ID!, reviewText: String!, spiceRating: Int!): Review
     addComment(reviewId: ID!, comment: CommentInput!): Review
     removeReview(reviewId: ID!): Review
     removeComment(reviewId: ID!, commentId: ID!): Review
