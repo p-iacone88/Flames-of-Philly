@@ -1,10 +1,10 @@
 module.exports = {
-  purge: ['./**/*.{js,jsx}', './src/**/*.html'],
-  darkMode: false, // optional, set to 'media' for dark mode based on user preference
+  content: ['./**/*.{js,jsx}', './src/**/*.html'],
+  darkMode: false, // or 'media' or 'class'
   theme: {
     extend: {
-      backgroundColor: {
-        'my-custom-bg': '#DBEE7B', // Add custom background color here
+      colors: {
+        'my-custom-bg': '#DBEE7B', // Custom background color
       },
     },
   },
