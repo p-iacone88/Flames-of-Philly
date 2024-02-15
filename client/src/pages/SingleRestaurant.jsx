@@ -3,7 +3,7 @@ import { useParams } from 'react-router-dom';
 import { useQuery, useMutation } from '@apollo/client';
 import { GET_RESTAURANT } from '../utils/queries';
 import { ADD_REVIEW } from '../utils/mutations';
-import './SingleRestaurant.css'; // Ensure CSS is imported
+import './SingleRestaurant.css';
 
 const SingleRestaurant = () => {
   const { id } = useParams();
