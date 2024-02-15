@@ -3,23 +3,19 @@ import { useParams } from 'react-router-dom';
 import { useQuery, useMutation } from '@apollo/client';
 import { GET_RESTAURANT } from '../utils/queries';
 import { ADD_REVIEW } from '../utils/mutations';
-import AddedReview from '../components/AddedReview';
+import './SingleRestaurant.css'; // Ensure CSS is imported
 
 const SingleRestaurant = () => {
-  const { id } = useParams(); // Get restaurant ID from URL
+  const { id } = useParams();
   const { loading, error, data } = useQuery(GET_RESTAURANT, {
     variables: { id }
   });
 
   const [reviewText, setReviewText] = useState('');
   const [spiceRating, setSpiceRating] = useState(0);
-  const [newReview, setNewReview] = useState(null); // State to track newly added review
 
   const [addReview] = useMutation(ADD_REVIEW, {
-    refetchQueries: [{ query: GET_RESTAURANT, variables: { id } }],
-    onCompleted: (data) => {
-      setNewReview(data.addReview); // Update state with newly added review
-    },
+    refetchQueries: [{ query: GET_RESTAURANT, variables: { id } }]
   });
 
   const handleSubmit = async (e) => {
@@ -31,11 +27,7 @@ const SingleRestaurant = () => {
       }
 
       await addReview({
-        variables: {
-          restaurantId: id, // Use the restaurant ID from the URL
-          reviewText,
-          spiceRating
-        }
+        variables: { restaurantId: data.restaurant._id, reviewText, spiceRating }
       });
 
       // Reset form fields
@@ -53,12 +45,12 @@ const SingleRestaurant = () => {
   const { restaurant } = data;
 
   return (
-    <div>
-      <h1>{restaurant.name}</h1>
+    <div className="container">
+      <h1 className="heading">{restaurant.name}</h1>
       <p>{restaurant.address}</p>
       <p>Rating: {restaurant.rating}</p>
       <h4>Spice Rating: {restaurant.spiceRating}</h4>
-      <h2>Reviews:</h2>
+      <h2 className="heading">Reviews:</h2>
       <ul>
         {restaurant.reviews && restaurant.reviews.map(review => (
           <li key={review._id}>
@@ -67,21 +59,22 @@ const SingleRestaurant = () => {
           </li>
         ))}
       </ul>
-      {newReview && <AddedReview review={newReview} />}
-      <h2>Add a Review:</h2>
-      <form onSubmit={handleSubmit}>
+      <h2 className="heading">Add a Review:</h2>
+      <form onSubmit={handleSubmit} className="form">
         <textarea
+          className="input"
           value={reviewText}
           onChange={(e) => setReviewText(e.target.value)}
           placeholder="Write your review here..."
-        />
-        <label>Spice Rating:</label>
+        ></textarea>
+        <label className="label">Spice Rating:</label>
         <input
+          className="input"
           type="number"
           value={spiceRating}
           onChange={(e) => setSpiceRating(Number(e.target.value))}
         />
-        <button type="submit">Submit Review</button>
+        <button className="button" type="submit">Submit Review</button>
       </form>
     </div>
   );
