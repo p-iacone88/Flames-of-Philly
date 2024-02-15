@@ -27,12 +27,11 @@ export const LOGIN_USER = gql`
 `;
 
 export const ADD_REVIEW = gql`
-  mutation AddReview($restaurantId: ID!, $reviewText: String!, $spiceRating: Int) {
+  mutation AddReview($restaurantId: ID!, $reviewText: String!, $spiceRating: Int!) {
     addReview(restaurantId: $restaurantId, reviewText: $reviewText, spiceRating: $spiceRating) {
       _id
       reviewText
       spiceRating
-      reviewAuthor
       createdAt
     }
   }
