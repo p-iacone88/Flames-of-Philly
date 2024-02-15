@@ -1,52 +1,22 @@
-/* .footer--container {
-    background-color:#EF5353; 
-    color: black;
-    text-align: center;
-    padding: 20px 0;
-    position: relative;
-    bottom: 0;
-    width: 100%;
-}
-
-.footer--content p {
-    margin: 10px 0; 
-}
-
-.social-links {
-    margin-top: 20px;
-}
-
-.social-links a {
-    margin: 0 10px;
-    color: black;
-    text-decoration: none;
-    transition: color 0.3s ease;
-}
-
-.social-links a:hover {
-    color: #B84040; 
-} */
-
-
 
 .footer--container {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    background-color: #EF5353; /* Red background color */
+    background-color: #EF5353; 
     color: black;
     text-align: center;
-    padding: 20px 0; /* Adjusted padding for top and bottom */
+    padding: 20px 0; 
     position: relative;
     width: 100%;
-}
+} 
 
-/* .footer--link--container, .footer--social--icon {
+.footer--link--container, .footer--social--icon {
     display: flex;
     justify-content: center; 
     flex-wrap: wrap; 
-} */
+} 
 
 .footer--items ul, .footer--social--icon ul {
     list-style: none; 
@@ -58,11 +28,11 @@
   }
 
 .footer--items ul, .social-links ul {
-    list-style-type: none; /* Remove bullet points */
-    padding: 0; /* Remove default padding */
-    margin: 0; /* Remove default margin */
-    display: flex; /* Display list items inline */
-    justify-content: center; /* Center align the items */
+    list-style-type: none; 
+    padding: 0; 
+    margin: 0; 
+    display: flex; 
+    justify-content: center; 
     flex-wrap: wrap;
     gap: 20px; 
 }
@@ -80,17 +50,22 @@
 }
 
 .social-links a:hover {
-    color: #B84040; /* Lighter or contrasting color on hover */
+    color: #B84040;
 }
 
 .footer--items a:hover, .footer--social--icon a:hover {
-    color: #B84040; /* Optional: Changes link color on hover for a visual effect */
+    color: #B84040; 
 }
 
 .footer--items a, .footer--social--icon a, .footer--content--container a {
-    color: black; /* Explicitly set link color to black */
+    color: black; 
     text-decoration: none; 
     cursor: pointer;
 }
 
-/* Keep any other existing styles you have below */
+.social-links a:hover, .footer--items a:hover, .footer--social--icon a:hover {
+    color: #B84040;
+}
+
+
+

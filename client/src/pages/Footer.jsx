@@ -2,13 +2,17 @@ import { Link } from "react-scroll";
 import React from "react";
 import './Footer.css';
 
+
+
 function Footer() {
   return (
+ 
     <footer className="footer--container">
       <div className="footer--link--container">
         <div>
           {/* <img src="/../../assets/tiny.png" alt="Flames of Philly" /> */}
         </div>
+  
         <div className="footer--items">
           <ul>
             <li>
@@ -78,6 +82,7 @@ function Footer() {
             </li>
           </ul>
         </div>
+        
         <div className="footer--social--icon">
           <ul>
             <li>
